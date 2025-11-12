@@ -43,6 +43,37 @@ public class Biblioteca implements Iterable<Libro>{
         return s.toString();
     }
 
+    public Libro cercaByTitolo(String titolo){
+        for(Libro l : this){
+            if(l.getTitolo().equals(titolo)){
+                return l;
+            }
+        }
+        return null;
+    }
+
+    public void setPrestito(String cliente , String libro){
+        LibroAbstract l = (LibroAbstract)cercaByTitolo(libro);
+        if(!l.isDisponibile()){
+            throw new NoSuchElementException("Libro ne disponibile");
+        }
+        if(prestiti.get(cliente)==null){
+            prestiti.put(cliente, new LinkedList<Libro>());
+        }
+        prestiti.get(cliente).add(l);
+        l.setDisponibile(false);
+    }
+
+    public void restituisci(String cliente , String libro){
+        LibroAbstract l = (LibroAbstract)cercaByTitolo(libro);
+        prestiti.get(cliente).remove(l);
+        l.setDisponibile(true);
+    }
+
+    public List<Libro> getPrestitiByCliente(String cliente){
+        return prestiti.get(cliente);
+    }
+
     public class IteratoreDiLibri implements Iterator<Libro>{
         private boolean okRemove = false;
         private int i = 1;
