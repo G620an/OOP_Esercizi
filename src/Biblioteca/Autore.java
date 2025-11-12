@@ -2,7 +2,7 @@ package Biblioteca;
 
 import java.util.Objects;
 
-public class Autore {
+public class Autore implements Comparable<Autore>{
     private String nome;
     private String cognome;
     private String nazio;
@@ -50,5 +50,14 @@ public class Autore {
     @Override
     public int hashCode() {
         return Objects.hash(nome, cognome, nazio);
+    }
+
+    @Override
+    public int compareTo(Autore o) {
+        if(this.nome.equals(o.nome)){
+            return this.cognome.compareTo(o.cognome);
+        }else{
+            return this.nome.compareTo(o.nome);
+        }
     }
 }

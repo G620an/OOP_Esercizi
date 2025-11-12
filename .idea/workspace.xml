@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0240a4a0-adc6-4dea-8a65-01f31bc1746c" name="Changes" comment="Revert &quot;Revert &quot;Biblioteca&quot;&quot;&#10;&#10;This reverts commit 2afad514">
+    <list default="true" id="0240a4a0-adc6-4dea-8a65-01f31bc1746c" name="Changes" comment="Autore e Nazionalità">
+      <change afterPath="$PROJECT_DIR$/src/Biblioteca/LibroAbstract.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Biblioteca/Autore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Biblioteca/Autore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Biblioteca/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Biblioteca/Libro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762960159144</updated>
-      <workItem from="1762960163215" duration="4912000" />
+      <workItem from="1762960163215" duration="5794000" />
     </task>
     <task id="LOCAL-00001" summary="Autore e Nazionalità">
       <option name="closed" value="true" />
@@ -126,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762964734541</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Autore e Nazionalità">
+      <option name="closed" value="true" />
+      <created>1762965116987</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762965116987</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,9 +154,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Autore e Nazionalità" />
     <MESSAGE value="Revert &quot;Revert &quot;Biblioteca&quot;&quot;&#10;&#10;This reverts commit 2afad514" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Revert &quot;Biblioteca&quot;&quot;&#10;&#10;This reverts commit 2afad514" />
+    <MESSAGE value="Autore e Nazionalità" />
+    <option name="LAST_COMMIT_MESSAGE" value="Autore e Nazionalità" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
