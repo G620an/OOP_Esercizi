@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0240a4a0-adc6-4dea-8a65-01f31bc1746c" name="Changes" comment="Modified">
-      <change beforePath="$PROJECT_DIR$/src/Biblioteca/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Biblioteca/Biblioteca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ferrovie/Identificativo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ferrovie/Lunghezza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ferrovie/Massa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ferrovie/MassaConcreta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ferrovie/Motrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ferrovie/Vagone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ferrovie/VagoneAbstract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ferrovie/Velocita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -62,6 +72,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.MassaConcreta.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -79,6 +90,21 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="MassaConcreta" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="UNNAMED_CLASS_CONFIGURATION" value="true" />
+      <option name="MAIN_CLASS_NAME" value="MassaConcreta" />
+      <module name="OOP_Esercizi" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MassaConcreta" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -93,7 +119,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1762960159144</updated>
-      <workItem from="1762960163215" duration="10545000" />
+      <workItem from="1762960163215" duration="16290000" />
     </task>
     <task id="LOCAL-00001" summary="Autore e Nazionalità">
       <option name="closed" value="true" />
@@ -151,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762970000265</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Modified">
+      <option name="closed" value="true" />
+      <created>1762971093100</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1762971093100</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
