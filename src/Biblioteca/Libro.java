@@ -5,4 +5,5 @@ public interface Libro {
     Autore getAutore();
     int getAnnoPubblicazione();
     boolean isDisponibile();
+    Genere getGenere();
 }
