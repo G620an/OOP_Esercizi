@@ -6,7 +6,8 @@ public class LibroConGenere extends LibroAbstract{
         super(titolo, autore, annoPubblicazione);
         this.genere = genere;
     }
-
+    
+    @Override
     public Genere getGenere() {
         return genere;
     }
