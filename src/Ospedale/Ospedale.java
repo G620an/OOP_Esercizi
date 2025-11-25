@@ -28,6 +28,7 @@ public interface Ospedale extends Iterable<Reparto>{ //Sara la nostra struttura 
     if(ratio < 0.15) return false;
     for(Reparto rep : this){
       supTot += rep.superficie().area();
+      if(rep instanceof TerapiaIntensiva) terapiaIntensiva = true;
       
     }
   }
