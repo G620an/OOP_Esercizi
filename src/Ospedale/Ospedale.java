@@ -30,7 +30,7 @@ public interface Ospedale extends Iterable<Reparto>{ //Sara la nostra struttura 
       supTot += rep.superficie().area();
       if(rep instanceof TerapiaIntensiva) terapiaIntensiva = true;
       if(rep.criticità() == ALTO || rep.criticità() == ALTISSIMO){
-        if(rep.medici() < 3) return false<
+        if(rep.medici() < 3) return false;
       }
     }
     if(supTot < 5000.0) return false:
