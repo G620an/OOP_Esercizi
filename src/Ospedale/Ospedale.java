@@ -20,6 +20,11 @@ public interface Ospedale extends Iterable<Reparto>{ //Sara la nostra struttura 
     }
     return (double) med/(double)pz;
   }
-  boolean verificaStandard();
+  default boolean verificaStandard(){
+    boolean terapiaIntensiva = false;
+    for(Reparto rep : this){
+      
+    }
+  }
   //Bisogna risolvere qui i metodi perche si 
 }
