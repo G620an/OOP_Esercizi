@@ -32,7 +32,7 @@ public class OspedaleImpl implements Ospedale{
         if(!hasNext()){
           throw new NoSuchElementException();
         }
-        private Reparto temp = cur;
+        private Reparto temp = cur.r;
         cur = cur.next();
         return temp;
       }
