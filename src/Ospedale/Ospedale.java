@@ -25,7 +25,9 @@ public interface Ospedale extends Iterable<Reparto>{ //Sara la nostra struttura 
     boolean verCriticita = false;
     double supTot = 0.0;
     double ratio = this.calcolaRatioMediciPazienti();
+    if(ratio < 0.15) return false;
     for(Reparto rep : this){
+      supTot += rep.superficie().area();
       
     }
   }
