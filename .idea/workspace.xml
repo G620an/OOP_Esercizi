@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0240a4a0-adc6-4dea-8a65-01f31bc1746c" name="Changes" comment="Modified">
-      <change afterPath="$PROJECT_DIR$/src/Ospedale/Monitoraggio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ospedale/TerapiaIntensiva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ospedale/LinkedReparti.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ospedale/OspedaleLC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ospedale/CapacitaPazienti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/CapacitaPazienti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ospedale/Codice reparto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/CodiceReparto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ospedale/Criticità.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/Criticità.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ospedale/Nome reparto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/NomeReparto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ospedale/Ospedale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/Ospedale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ospedale/OspedaleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/OspedaleImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ospedale/Reparto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/Reparto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ospedale/RepartoAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/RepartoAbstract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ospedale/RepartoConcreto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/RepartoConcreto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ospedale/Superficie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/Superficie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +20,8 @@
       <list>
         <option value="Interface" />
         <option value="Record" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -126,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1762960159144</updated>
       <workItem from="1762960163215" duration="20192000" />
-      <workItem from="1764085006586" duration="2512000" />
+      <workItem from="1764085006586" duration="8268000" />
     </task>
     <task id="LOCAL-00001" summary="Autore e Nazionalità">
       <option name="closed" value="true" />
@@ -200,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763135790805</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Modified">
+      <option name="closed" value="true" />
+      <created>1764089596595</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1764089596595</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
