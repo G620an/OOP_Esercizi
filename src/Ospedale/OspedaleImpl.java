@@ -1,3 +1,7 @@
+package Ospedale;
+
+import java.util.NoSuchElementException;
+
 public class OspedaleImpl implements Ospedale{
   
   public final class Nodo{
@@ -30,7 +34,7 @@ public class OspedaleImpl implements Ospedale{
       
       Reparto next(){
         if(!hasNext()){
-          throw new NoSuchElementException();
+          throw new NoSuchElementException("Next node is empty");
         }
         pre = cor;
         cor = cor.next();

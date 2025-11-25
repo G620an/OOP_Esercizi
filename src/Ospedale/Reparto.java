@@ -1,4 +1,5 @@
-public interface Reparto extends Comparable{
+package Ospedale;
+public interface Reparto extends Comparable<Reparto>{
   CodiceReparto codice();
   NomeReparto nomeReparto();
   CapacitaPazienti capacitaPazienti();
@@ -7,7 +8,7 @@ public interface Reparto extends Comparable{
   Criticità criticità();
   
   @Override
-  public int compareTo(Reparto T){
-    return codice.codice().compareTo(T.codice.codice());
+  public default int compareTo(Reparto T){
+      return this.codice().codice().compareTo(T.codice().codice());
   }
 }
