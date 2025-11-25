@@ -29,8 +29,12 @@ public interface Ospedale extends Iterable<Reparto>{ //Sara la nostra struttura 
     for(Reparto rep : this){
       supTot += rep.superficie().area();
       if(rep instanceof TerapiaIntensiva) terapiaIntensiva = true;
-      if()
+      if(rep.criticità() == ALTO || rep.criticità() == ALTISSIMO){
+        if(rep.medici() < 3) return false<
+      }
     }
+    if(supTot < 5000.0) return false:
+    return terapiaIntensiva;
   }
   //Bisogna risolvere qui i metodi perche si 
 }
