@@ -39,7 +39,7 @@ public class RepartoConcreto extends RepartoAbstract{
   }
   
   @Override
-  public criticità criticità(){
+  public Criticità criticità(){
     return criticità;
   }
   
