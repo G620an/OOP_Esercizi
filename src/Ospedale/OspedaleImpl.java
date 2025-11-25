@@ -1,4 +1,12 @@
 public class OspedaleImpl implements Ospedale{
+  
+  public final class Nodo{
+    private Reparto r;
+    Nodo(Reparto r){
+      this.r = r;
+    }
+  }
+  
   public OspedaleImpl(){}
   
   @Override
@@ -11,5 +19,8 @@ public class OspedaleImpl implements Ospedale{
     
   }
   
-  
+  @Override
+  public Iterator<Reparto> Iterator(){
+    return null;
+  }
 }
