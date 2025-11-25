@@ -1,10 +1,10 @@
 public class RepartoConcreto extends RepartoAbstract{
-  CodiceReparto codice;
-  NomeReparto nome;
-  CapacitaPazienti capacitaPazienti;
-  int medici;
-  Superficie superficie;
-  Criticità criticità;
+  private CodiceReparto codice;
+  private NomeReparto nome;
+  private CapacitaPazienti capacitaPazienti;
+  private int medici;
+  private Superficie superficie;
+  private Criticità criticità;
   
   public RepartoConcreto(CodiceReparto codice , NomeReparto nome, capacitaPazienti capacitaPazienti , int medici, Superficie superficie , Criticità criticità){
     super(); //Chiamata esplicita al costruttore della classe genitore , anche se non ha un costruttore esplicito la abstract
