@@ -15,7 +15,7 @@ public interface Ospedale extends Iterable<Reparto>{ //Sara la nostra struttura 
     int med = 0;
     int pz = 0;
     for(Reparto rep : this){
-      pz += rep.capacitaPazienti();
+      pz += rep.capacitaPazienti().cap();
       med =+ rep.medici();
     }
     return med/pz;
