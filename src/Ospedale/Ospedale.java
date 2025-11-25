@@ -22,6 +22,9 @@ public interface Ospedale extends Iterable<Reparto>{ //Sara la nostra struttura 
   }
   default boolean verificaStandard(){
     boolean terapiaIntensiva = false;
+    boolean verCriticita = false;
+    double supTot = 0.0;
+    double ratio = this.calcolaRatioMediciPazienti();
     for(Reparto rep : this){
       
     }
