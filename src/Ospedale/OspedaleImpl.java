@@ -21,6 +21,19 @@ public class OspedaleImpl implements Ospedale{
   
   @Override
   public Iterator<Reparto> Iterator(){
-    return null;
+    return new Iterable<Reparto>{
+      private Reparto cor;
+      boolean hasNext(){
+        return cor.next == null;
+      }
+      
+      Reparto next(){
+        if(!hasNext()){
+          throw new NoSuchElementException();
+        }
+        private Reparto temp = cur;
+        cur = cur.next();
+        return temp;
+      }
   }
 }
