@@ -5,4 +5,9 @@ public interface Reparto extends Comparable{
   int medici();
   Superficie superficie();
   Criticità criticità();
+  
+  @Override
+  public int compareTo(Reparto T){
+    return codice.codice().compareTo(T.codice.codice());
+  }
 }
