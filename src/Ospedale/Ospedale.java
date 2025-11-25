@@ -4,14 +4,22 @@ public interface Ospedale extends Iterable<Reparto>{ //Sara la nostra struttura 
   default Reparto getReparto(int index){
     if(index < 0) throw new IllegalArgumentException("Il valore index non puo essere negativo");
     int a;
-    for(rep : this){
+    for(Reparto rep : this){
       if(a == index){
         return rep
       }
     }
     throw new NoSuchElementException("Indice non valido");
   }
-  double calcolaRatioMediciPazienti();
+  default double calcolaRatioMediciPazienti(){
+    int med = 0;
+    int pz = 0;
+    for(Reparto rep : this){
+      pz += rep.capacitaPazienti();
+      med =+ rep.medici();
+    }
+    return med/pz;
+  }
   boolean verificaStandard();
   //Bisogna risolvere qui i metodi perche si 
 }
