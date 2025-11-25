@@ -28,7 +28,20 @@ public class RepartoConcreto extends RepartoAbstract{
     return nome;
   }
   
+  @Override
+  public capacitaPazienti capacitaPazienti(){
+    return capacitaPazienti<
+  }
   
+  @Override
+  public int medici(){
+    return medici;
+  }
+  
+  @Override
+  public criticità criticità(){
+    return criticità;
+  }
   
   
 }
