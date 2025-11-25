@@ -22,7 +22,8 @@ public class OspedaleImpl implements Ospedale{
   @Override
   public Iterator<Reparto> Iterator(){
     return new Iterable<Reparto>{
-      private Nodo cor;
+      private Nodo corhead;
+      private Nodo pre = null;
       boolean hasNext(){
         return cor.next == null;
       }
