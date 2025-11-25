@@ -22,14 +22,14 @@ public interface Ospedale extends Iterable<Reparto>{ //Sara la nostra struttura 
   }
   default boolean verificaStandard(){
     boolean terapiaIntensiva = false;
-    boolean verCriticita = false;
+    boolean verCriticita = true;
     double supTot = 0.0;
     double ratio = this.calcolaRatioMediciPazienti();
     if(ratio < 0.15) return false;
     for(Reparto rep : this){
       supTot += rep.superficie().area();
       if(rep instanceof TerapiaIntensiva) terapiaIntensiva = true;
-      
+      if()
     }
   }
   //Bisogna risolvere qui i metodi perche si 
