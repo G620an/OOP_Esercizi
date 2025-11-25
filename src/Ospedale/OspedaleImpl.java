@@ -39,6 +39,8 @@ public class OspedaleImpl implements Ospedale{
       
       boolean remove(){
         if(pre == cor) throw new NoSuchElementException();
+        size--;
+        pre.next() = cur;
       }
   }
 }
