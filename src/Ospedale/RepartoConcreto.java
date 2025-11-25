@@ -18,13 +18,17 @@ public class RepartoConcreto extends RepartoAbstract{
     this.criticità = criticità;
   }
   
+  @Override
   public CodiceReparto codiceReparto(){
     return codiceReparto;
   }
   
-  public NomeReparto nome(){
+  @Override
+  public NomeReparto NomeReparto(){
     return nome;
   }
+  
+  
   
   
 }
