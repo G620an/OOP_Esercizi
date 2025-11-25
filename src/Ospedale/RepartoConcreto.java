@@ -18,5 +18,13 @@ public class RepartoConcreto extends RepartoAbstract{
     this.criticità = criticità;
   }
   
+  public CodiceReparto codiceReparto(){
+    return codiceReparto;
+  }
+  
+  public NomeReparto nome(){
+    return nome;
+  }
+  
   
 }
