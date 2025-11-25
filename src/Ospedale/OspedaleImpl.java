@@ -32,9 +32,13 @@ public class OspedaleImpl implements Ospedale{
         if(!hasNext()){
           throw new NoSuchElementException();
         }
-        pre = cur;
-        cur = cur.next();
+        pre = cor;
+        cor = cor.next();
         return pre.r;
+      }
+      
+      boolean remove(){
+        if(pre == cor) throw new NoSuchElementException();
       }
   }
 }
