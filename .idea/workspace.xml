@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0240a4a0-adc6-4dea-8a65-01f31bc1746c" name="Changes" comment="Modified">
-      <change afterPath="$PROJECT_DIR$/src/Ospedale/OspedaleUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ospedale/CodiceReparto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/CodiceReparto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ospedale/NomeReparto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/NomeReparto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ospedale/Ospedale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/Ospedale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ospedale/OspedaleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/OspedaleImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ospedale/OspedaleLC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/OspedaleLC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/RepartoConcreto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ospedale/RepartoConcreto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1762960159144</updated>
       <workItem from="1762960163215" duration="20192000" />
-      <workItem from="1764085006586" duration="10029000" />
+      <workItem from="1764085006586" duration="10416000" />
     </task>
     <task id="LOCAL-00001" summary="Autore e Nazionalità">
       <option name="closed" value="true" />
@@ -209,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764096172225</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Modified">
+      <option name="closed" value="true" />
+      <created>1764098049630</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1764098049630</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

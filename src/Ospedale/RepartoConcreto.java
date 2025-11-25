@@ -36,7 +36,10 @@ public class RepartoConcreto extends RepartoAbstract{
   public int medici(){
     return medici;
   }
-  
+
+  @Override
+  public Superficie superficie(){return superficie;}
+
   @Override
   public Criticità criticità(){
     return criticità;
