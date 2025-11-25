@@ -1,4 +1,4 @@
 package Ospedale;
-public enum Criticità(){
+public enum Criticità{
   BASSO, SCARSO, MEDIO, ALTO, ALTISSIMO;
 }

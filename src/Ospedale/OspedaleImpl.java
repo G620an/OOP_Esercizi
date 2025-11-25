@@ -28,5 +28,14 @@ public class OspedaleImpl implements Ospedale{
       return reparti.iterator(); //Restituisco un iteratore della struttura dati che definisco all'inizio
   }
 
+  public String toString(){
+      StringBuilder sb = new StringBuilder();
+      for(Reparto r : this){
+          sb.append(r.toString());
+      }
+      return sb.toString();
+  }
+
+
 
 }
