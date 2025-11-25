@@ -16,4 +16,9 @@ public abstract class RepartoAbstract{
     }
     return false
   }
+  
+  @Override
+  public int hashCode(){
+    return this.codiceReparto().hashCode();
+  }
 }
