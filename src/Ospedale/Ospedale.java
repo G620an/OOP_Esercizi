@@ -36,5 +36,5 @@ public interface Ospedale extends Iterable<Reparto>{ //Sara la nostra struttura 
     if(supTot < 5000.0) return false:
     return terapiaIntensiva;
   }
-  //Bisogna risolvere qui i metodi perche si 
+  //Bisogna risolvere qui i metodi
 }
