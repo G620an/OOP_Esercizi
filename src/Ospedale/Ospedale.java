@@ -9,6 +9,7 @@ public interface Ospedale extends Iterable<Reparto>{ //Sara la nostra struttura 
         return rep
       }
     }
+    throw new NoSuchElementException("Indice non valido");
   }
   double calcolaRatioMediciPazienti();
   boolean verificaStandard();
