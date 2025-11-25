@@ -18,7 +18,7 @@ public interface Ospedale extends Iterable<Reparto>{ //Sara la nostra struttura 
       pz += rep.capacitaPazienti().cap();
       med =+ rep.medici();
     }
-    return med/pz;
+    return (double) med/(double)pz;
   }
   boolean verificaStandard();
   //Bisogna risolvere qui i metodi perche si 
