@@ -11,7 +11,7 @@ public class RepartoConcreto extends RepartoAbstract{
     this.codice = codice;
     this.nome = nome;
     this.capacitaPazienti = capacitaPazienti;
-    if(medici <= 0 || medici > 50} {
+    if(medici <= 0 || medici > 50}{
       throw new IllegalArgumentException("Valore dei medici invalido");
     }
     this.superficie = superficie;
