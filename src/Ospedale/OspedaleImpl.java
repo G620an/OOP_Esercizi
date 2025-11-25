@@ -22,7 +22,7 @@ public class OspedaleImpl implements Ospedale{
   @Override
   public Iterator<Reparto> Iterator(){
     return new Iterable<Reparto>{
-      private Reparto cor;
+      private Nodo cor;
       boolean hasNext(){
         return cor.next == null;
       }
