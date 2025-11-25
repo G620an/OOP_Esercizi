@@ -7,7 +7,7 @@ public class RepartoConcreto extends RepartoAbstract{
   Criticità criticità;
   
   public RepartoConcreto(CodiceReparto codice , NomeReparto nome, capacitaPazienti capacitaPazienti , int medici, Superficie superficie , Criticità criticità){
-    super();
+    super(); //Chiamata esplicita al costruttore della classe genitore , anche se non ha un costruttore esplicito la abstract
     this.codice = codice;
     this.nome = nome;
     this.capacitaPazienti = capacitaPazienti;
