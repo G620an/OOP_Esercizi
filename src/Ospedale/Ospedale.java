@@ -9,7 +9,7 @@ public interface Ospedale extends Iterable<Reparto>{ //Sara la nostra struttura 
         return rep
       }
     }
-    throw new NoSuchElementException("Indice non valido");
+    throw new NoSuchElementException("Indice non valido"); //Decido di sfruttare le eccezioni per gestire le incorrettezze della index
   }
   default double calcolaRatioMediciPazienti(){
     int med = 0;
