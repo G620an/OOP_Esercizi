@@ -13,7 +13,9 @@ public class Utile{
     }
 
     public static void naturalMergeSort(InputStream in){
-        return 
+        
     }
+
+     
 
 }
