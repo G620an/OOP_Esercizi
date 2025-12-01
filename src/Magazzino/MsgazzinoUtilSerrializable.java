@@ -5,9 +5,9 @@ public class MagazzinoUtilSerializable{
   private MagazzinoUtilSerializable(){}
   
   public void salvaMagazzino(String path, Magazzino magazzino){
-    try(BufferedOutputStream bs = new BufferedOutputStream(new FileOutputStream(path)) ){
+    try(BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(path)) ){
       for(Materiale m : magazzino){
-        bs.writeObject(m);
+        bos.writeObject(m);
       }
     }catch(IOException e){
       e.printStackTrace();
