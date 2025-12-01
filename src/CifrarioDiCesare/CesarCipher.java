@@ -8,12 +8,15 @@ public class CesarCipher{
       StringBuilder sb = new StringBuilder();
       Boolean continua = true;
       while(continua){
-        String line = br.readLine();
+        char[] line = br.readLine().toCharArray();
         if(line == null){
           continua = false;
           break;
         }
-        char[] cl = line.toCharset();
+        for(int i=0 ; i<line.length ; i++){
+          
+        }
+        
         
       }
     }catch(IOException e){
