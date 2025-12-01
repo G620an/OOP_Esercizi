@@ -5,5 +5,6 @@ public static void main(String[] args){
   if(args.length != 3){
     throw new IllegalArgumentException("Numero di argomenti diverso da tre");
   }
+  String path = args[0];
   
 }
