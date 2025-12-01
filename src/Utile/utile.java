@@ -12,7 +12,7 @@ public class Utile{
        }
     }
 
-    public static void naturalMergeSort(InputStream in){
+    public static void naturalMergeSort(InputStream in)throw new IOException(){
         
     }
 
