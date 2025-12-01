@@ -20,6 +20,7 @@ public class CesarCipher{
       }
       bw.createNewFile();
       bw.write(sb.toString());
+      bw.flush();
     }catch(IOException e){
       e.printStackTrace();
     }
