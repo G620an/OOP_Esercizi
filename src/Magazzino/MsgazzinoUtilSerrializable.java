@@ -17,7 +17,7 @@ public class MagazzinoUtilSerializable{
   
   public Magazzino caricaMagazzino(String path){
     try(BufferedReader br = new BufferedReader(new FileReader(path))){
-      
+      Magazzino m = new Magazzino();
     }catch(IOException e){
       e.printStackTrace();
     }
