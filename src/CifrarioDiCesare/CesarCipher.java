@@ -3,7 +3,7 @@ import java.IO.*;
 
 public class CesarCipher{
   private CesarCipher(){};
-  public static cifra(String path , int key){
+  public static void cifra(String path , int key){
     try(BufferedReader br = new  BufferedReader(new FileReader(path)), BufferedWriter bw = new BufferedWriter(new FileWriter(path))){
       StringBuilder sb = new StringBuilder();
       Boolean continua = true;
