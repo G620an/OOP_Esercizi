@@ -23,6 +23,10 @@ public class CesarCipher{
     }catch(IOException e){
       e.printStackTrace();
     }
-    
+  }
+  
+  public static void decifra(String path; int key){
+    int menoKey = (-1)*key;
+    this.cifra(path , menoKey);
   }
 }
