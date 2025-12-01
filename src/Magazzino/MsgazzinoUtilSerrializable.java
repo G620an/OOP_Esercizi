@@ -5,7 +5,7 @@ public class MagazzinoUtilSerializable{
   private MagazzinoUtilSerializable(){}
   
   public void salvaMagazzino(String path, Magazzino magazzino){
-    try(BufferedReader bw = new BuferedReader(new FileReader(path)) ){
+    try(BufferedOutputStream bs = new BufferedOutputStream(new FileOutputStream(path)) ){
       for(Materiale m : magazzino){
         bw.write(m);
         bw.newLine();
@@ -18,6 +18,10 @@ public class MagazzinoUtilSerializable{
   public Magazzino caricaMagazzino(String path){
     try(BufferedReader br = new BufferedReader(new FileReader(path))){
       Magazzino m = new Magazzino();
+      boolean continua = true;
+      while(continua){
+        
+      }
     }catch(IOException e){
       e.printStackTrace();
     }
