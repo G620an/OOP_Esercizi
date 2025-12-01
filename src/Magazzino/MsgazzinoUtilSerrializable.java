@@ -15,7 +15,7 @@ public class MagazzinoUtilSerializable{
   }
   
   public Magazzino caricaMagazzino(String path){
-    try(BufferedReader br = new BufferedReader(new FileReader(path))){
+    try(BufferedInputStream bsi = new BufferedInputStream(new FileInputStream(path))){
       Magazzino m = new Magazzino();
       boolean continua = true;
       while(continua){
