@@ -16,7 +16,7 @@ public class CesarCipher{
         for(int i=0 ; i<line.length ; i++){
           line[i] =+ key;
         }
-        sb.append(line)
+        sb.append(line);
         
         
       }
