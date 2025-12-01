@@ -16,11 +16,17 @@ public class MagazzinoUtilSerializable{
   
   public Magazzino caricaMagazzino(String path){
     try(BufferedInputStream bsi = new BufferedInputStream(new FileInputStream(path))){
-      Magazzino m = new Magazzino();
+      Magazzino magazzino = new Magazzino();
       boolean continua = true;
       while(continua){
-        
+        Materiale m = bsi.readObject();
+        if(m == null){
+          continua = false;
+          break;
+        }
+        magazzino.append(m);
       }
+      return magazzino;
     }catch(IOException e){
       e.printStackTrace();
     }
