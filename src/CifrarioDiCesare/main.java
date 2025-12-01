@@ -1,4 +1,6 @@
 package CifrarioDiCesare;
 import java.IO.*;
 
-public static void main
+public static void main(String[] args){
+  
+}
