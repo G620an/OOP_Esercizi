@@ -7,8 +7,7 @@ public class MagazzinoUtilSerializable{
   public void salvaMagazzino(String path, Magazzino magazzino){
     try(BufferedOutputStream bs = new BufferedOutputStream(new FileOutputStream(path)) ){
       for(Materiale m : magazzino){
-        bw.write(m);
-        bw.newLine();
+        bs.writeObject(m);
       }
     }catch(IOException e){
       e.printStackTrace();
