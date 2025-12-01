@@ -14,4 +14,12 @@ public class MagazzinoUtilSerializable{
       e.printStackTrace();
     }
   }
+  
+  public Magazzino caricaMagazzino(String path){
+    try(BufferedReader br = new BufferedReader(new FileReader(path))){
+      
+    }catch(IOException e){
+      e.printStackTrace();
+    }
+  }
 } 
