@@ -13,5 +13,7 @@ public static void main(String[] args){
     CesarCipher.cifra(path , key);
   }else if(metodo.equals("decifra")){
     CesarCipher.decifra(path , key);
+  }else{
+    throw new IllegalArgumentException("Parametro di cifratura errato");
   }
 }
