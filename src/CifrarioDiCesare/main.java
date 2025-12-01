@@ -10,6 +10,8 @@ public static void main(String[] args){
   int key = Integer.parseInt(args[2]);
   metodo += metodo.toLower();
   if(metodo.equals("cifra")){
-    CesarCipher.cifra(path , )
+    CesarCipher.cifra(path , key);
+  }else if(metodo.equals("decifra")){
+    CesarCipher.decifra(path , key);
   }
 }
