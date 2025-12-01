@@ -18,6 +18,7 @@ public class CesarCipher{
         }
         sb.append(line);
       }
+      bw.createNewFile();
       bw.write(sb.toString());
     }catch(IOException e){
       e.printStackTrace();
