@@ -7,7 +7,7 @@ public class CesarCipher{
     try(BufferedReader br = new  BufferedReader(new FileReader(path)), BufferedWriter bw = new BufferedWriter(new FileWriter(path))){
       Boolean continua = true;
       while(continua){
-        char[] line = br.readLine();
+        String line = br.readLine();
       }
     }catch(IOException e){
       e.printStackTrace();
