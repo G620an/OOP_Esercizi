@@ -1,4 +1,3 @@
-import oop.*;
 import oop.Utile.Utile;
 
 public static void main(String[] args){
@@ -18,13 +17,16 @@ public static void main(String[] args){
   }else{
     throw new IllegalArgumentException("Parametro di cifratura errato");
   }
-  */
+   */
 
-  long n = 1024*1024;
+  long n = 1024; //sono 4 MB di roba perchè gli int sono a 4 byte
   String path = "prova.txt";
   try{
       Utile.generaRandom(new BufferedOutputStream(new FileOutputStream(path), 8128), n);
+      Utile.printFile(new FileInputStream(path));
       Utile.naturalMergeSort(new File(path));
+      System.out.println("-----------------");
+      Utile.printFile(new FileInputStream(path));
   }catch(IOException e){
       e.printStackTrace();
   }

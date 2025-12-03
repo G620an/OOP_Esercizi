@@ -3,7 +3,7 @@ import java.io.*;
 
 public class MagazzinoUtilSerializable{
   private MagazzinoUtilSerializable(){}
-  
+  /*
   public void salvaMagazzino(String path, Magazzino magazzino){
     try(BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(path)) ){
       for(Materiale m : magazzino){
@@ -31,4 +31,6 @@ public class MagazzinoUtilSerializable{
       e.printStackTrace();
     }
   }
+
+   */
 } 
