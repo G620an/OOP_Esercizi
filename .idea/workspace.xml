@@ -5,7 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0240a4a0-adc6-4dea-8a65-01f31bc1746c" name="Changes" comment="Modified">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oop/Utile/Utile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Biblioteca/Autore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Biblioteca/Autore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Biblioteca/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Biblioteca/Biblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Biblioteca/Genere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Biblioteca/Genere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Biblioteca/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Biblioteca/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Biblioteca/LibroAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Biblioteca/LibroAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Biblioteca/LibroConGenere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Biblioteca/LibroConGenere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CifrarioDiCesare/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CifrarioDiCesare/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CifrarioDiCesare/CesarCipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CifrarioDiCesare/CesarCipher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CifrarioDiCesare/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ferrovie/Identificativo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ferrovie/Identificativo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ferrovie/Lunghezza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ferrovie/Lunghezza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ferrovie/Massa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ferrovie/Massa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ferrovie/MassaConcreta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ferrovie/MassaConcreta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ferrovie/Motrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ferrovie/Motrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ferrovie/Vagone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ferrovie/Vagone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ferrovie/VagoneAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ferrovie/VagoneAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ferrovie/Velocita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ferrovie/Velocita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Magazzino/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Magazzino/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Magazzino/Magazzino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Magazzino/Magazzino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Magazzino/MagazzinoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Magazzino/MagazzinoUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Magazzino/Materiale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Magazzino/Materiale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Magazzino/MsgazzinoUtilSerrializable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Magazzino/MagazzinoUtilSerializable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/CapacitaPazienti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/CapacitaPazienti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/CodiceReparto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/CodiceReparto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/Criticità.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/Criticità.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/LinkedReparti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/LinkedReparti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/Monitoraggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/Monitoraggio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/NomeReparto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/NomeReparto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/Ospedale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/Ospedale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/OspedaleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/OspedaleImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/OspedaleLC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/OspedaleLC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/OspedaleUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/OspedaleUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/Reparto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/Reparto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/RepartoAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/RepartoAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/RepartoConcreto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/RepartoConcreto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/Superficie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/Superficie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ospedale/TerapiaIntensiva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ospedale/TerapiaIntensiva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utile/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utile/prova.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Utile/prova.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utile/utile.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,12 +108,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.MassaConcreta.executor": "Run",
+    "Application.main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -77,12 +122,15 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "advanced.settings",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.main">
     <configuration name="MassaConcreta" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="UNNAMED_CLASS_CONFIGURATION" value="true" />
       <option name="MAIN_CLASS_NAME" value="MassaConcreta" />
@@ -91,8 +139,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="UNNAMED_CLASS_CONFIGURATION" value="true" />
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="OOP_Esercizi" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.main" />
         <item itemvalue="Application.MassaConcreta" />
       </list>
     </recent_temporary>
@@ -113,7 +170,7 @@
       <option name="presentableId" value="Default" />
       <updated>1762960159144</updated>
       <workItem from="1762960163215" duration="20192000" />
-      <workItem from="1764085006586" duration="10732000" />
+      <workItem from="1764085006586" duration="15106000" />
     </task>
     <task id="LOCAL-00001" summary="Autore e Nazionalità">
       <option name="closed" value="true" />
@@ -219,7 +276,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764098331360</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Modified">
+      <option name="closed" value="true" />
+      <created>1764098710919</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1764098710919</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
