@@ -1,5 +1,5 @@
 import oop.*;
-import oop.Utile.Utile; 
+import oop.Utile.Utile;
 
 public static void main(String[] args){
   /*
@@ -21,8 +21,10 @@ public static void main(String[] args){
   */
 
   long n = 1024*1024;
+  String path = "prova.txt";
   try{
-      Utile.generaRandom(new BufferedOutputStream(new FileOutputStream("prova.txt"), 8128), n);
+      Utile.generaRandom(new BufferedOutputStream(new FileOutputStream(path), 8128), n);
+      Utile.naturalMergeSort(new File(path));
   }catch(IOException e){
       e.printStackTrace();
   }
