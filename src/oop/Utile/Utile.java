@@ -114,8 +114,9 @@ public class Utile{
 
     public static void printFile(FileInputStream f){
         try(DataInputStream dis = new DataInputStream(f)){
-            int cor = 0;
-            while((byte)cor != (byte)-1){
+            int cor;
+            Scanner sc = new Scanner(dis);
+            while(sc.hasNext(){
                 cor = dis.readInt();
                 System.out.println(cor);
             }
