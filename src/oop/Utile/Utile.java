@@ -95,14 +95,13 @@ public class Utile{
             }
             if(stato){
                 int cor = dis1.readInt();
-                while((byte)cor != (byte)-1){
+                while(sc1.hasNext()){
                     dos.writeInt(cor);
                     cor = dis1.readInt();
                 }
             }else{
-                
                 int cor = dis2.readInt();
-                while((byte)cor != (byte)-1){
+                while(sc2.hasNext()){
                     dos.writeInt(cor);
                     cor = dis2.readInt();
                 }
