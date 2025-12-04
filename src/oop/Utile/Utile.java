@@ -82,7 +82,7 @@ public class Utile{
             int due = dis2.readInt();
             Scanner sc1 = new Scanner(dis1);
             Scanner sc2 = new Scanner(dis2);
-            while((byte)uno != (byte)-1 && (byte)due != (byte)-1){
+            while(sc1.hasNext() && sc2.hasNext()){
                 if(uno <= due){
                     dos.writeInt(uno);
                     stato = false;
