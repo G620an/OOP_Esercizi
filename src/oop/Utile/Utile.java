@@ -63,7 +63,7 @@ public class Utile{
             Scanner sc = new Scaner(dos);
             int pre = Integer.MIN_VALUE;
             int cor = dos.readInt();
-            while((byte)cor != (byte)-1){
+            while(sc.hasNext()){
                 if(pre > cor){
                     return false;
                 }
