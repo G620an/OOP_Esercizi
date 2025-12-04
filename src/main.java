@@ -20,7 +20,7 @@ public static void main(String[] args){
    */
 
   long n = 1024; //sono 4 MB di roba perchè gli int sono a 4 byte
-  String path = "prova.txt";
+  String path = "prova.dat";
   try{
       Utile.generaRandom(new BufferedOutputStream(new FileOutputStream(path), 8128), n);
       Utile.printFile(new FileInputStream(path));

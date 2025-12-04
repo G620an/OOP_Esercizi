@@ -18,8 +18,8 @@ public class Utile{
     public static void naturalMergeSort(File f){
         File f1 = null;
         File f2 = null;
-        String temp1 = "temp1.txt";
-        String temp2 = "temp2.txt";
+        String temp1 = "temp1.dat";
+        String temp2 = "temp2.dat";
         while(!crescente(f)){
             f1 = new File(temp1);
             f2 = new File(temp2);
@@ -60,16 +60,16 @@ public class Utile{
     }
 
     public static boolean crescente(File f){
-        try(DataInputStream dos = new DataInputStream(new FileInputStream(f));){
-            Scanner sc = new Scanner(dos);
+        try(DataInputStream dis = new DataInputStream(new FileInputStream(f));){
+            Scanner sc = new Scanner(dis);
             int pre = Integer.MIN_VALUE;
-            int cor = dos.readInt();
+            int cor = dis.readInt();
             while(sc.hasNext()){
                 if(pre > cor){
                     return false;
                 }
                 pre = cor;
-                cor = dos.readInt();
+                cor = dis.readInt();
             }
         }catch(IOException e) {
             return false;
