@@ -60,6 +60,7 @@ public class Utile{
 
     public static boolean crescente(File f){
         try(DataInputStream dos = new DataInputStream(new FileInputStream(f));){
+            Scanner sc = new Scaner(dos);
             int pre = Integer.MIN_VALUE;
             int cor = dos.readInt();
             while((byte)cor != (byte)-1){
