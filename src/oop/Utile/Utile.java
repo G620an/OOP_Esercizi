@@ -24,10 +24,11 @@ public class Utile{
             f1 = new File(temp1);
             f2 = new File(temp2);
             try(DataOutputStream dos1 = new DataOutputStream(new FileOutputStream(f1)); DataOutputStream dos2 = new DataOutputStream(new FileOutputStream(f2)); DataInputStream dis = new DataInputStream(new FileInputStream(f));){
+                Scaner sc = new Scanner(dis)
                 boolean primo = true;
                 int pre = Integer.MIN_VALUE;
                 int cor = dis.readInt();
-                while((byte)cor != (byte)-1){
+                while(sc.hasNext()){
                     if(pre <= cor){
                         if(primo){
                             dos1.writeInt(cor);
@@ -60,9 +61,10 @@ public class Utile{
 
     public static boolean crescente(File f){
         try(DataInputStream dos = new DataInputStream(new FileInputStream(f));){
+            Scanner sc = new Scaner(dos);
             int pre = Integer.MIN_VALUE;
             int cor = dos.readInt();
-            while((byte)cor != (byte)-1){
+            while(sc.hasNext()){
                 if(pre > cor){
                     return false;
                 }
@@ -80,8 +82,9 @@ public class Utile{
         try(DataInputStream dis1 = new DataInputStream(new FileInputStream(f1)); DataInputStream dis2 = new DataInputStream(new FileInputStream(f2)); DataOutputStream dos = new DataOutputStream(new FileOutputStream(f))){
             int uno = dis1.readInt();
             int due = dis2.readInt();
-
-            while((byte)uno != (byte)-1 && (byte)due != (byte)-1){
+            Scanner sc1 = new Scanner(dis1);
+            Scanner sc2 = new Scanner(dis2);
+            while(sc1.hasNext() && sc2.hasNext()){
                 if(uno <= due){
                     dos.writeInt(uno);
                     stato = false;
@@ -94,13 +97,13 @@ public class Utile{
             }
             if(stato){
                 int cor = dis1.readInt();
-                while((byte)cor != (byte)-1){
+                while(sc1.hasNext()){
                     dos.writeInt(cor);
                     cor = dis1.readInt();
                 }
             }else{
                 int cor = dis2.readInt();
-                while((byte)cor != (byte)-1){
+                while(sc2.hasNext()){
                     dos.writeInt(cor);
                     cor = dis2.readInt();
                 }
@@ -114,8 +117,9 @@ public class Utile{
 
     public static void printFile(FileInputStream f){
         try(DataInputStream dis = new DataInputStream(f)){
-            int cor = 0;
-            while((byte)cor != (byte)-1){
+            int cor;
+            Scanner sc = new Scanner(dis);
+            while(sc.hasNext()){
                 cor = dis.readInt();
                 System.out.println(cor);
             }
