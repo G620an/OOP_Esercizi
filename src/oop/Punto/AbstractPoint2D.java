@@ -1,4 +1,4 @@
-package Punto;
+package oop.Punto;
 
 import java.util.Objects;
 

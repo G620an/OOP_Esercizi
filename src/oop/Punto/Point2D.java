@@ -1,4 +1,4 @@
-package Punto;
+package oop.Punto;
 
 public interface Point2D {
     public double getX();

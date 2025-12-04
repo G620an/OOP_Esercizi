@@ -1,5 +1,4 @@
-package Punto;
-import java.awt.*;
+package oop.Punto;
 import java.util.*;
 
 public class PianoCartesiano implements Iterable<Point2D>{

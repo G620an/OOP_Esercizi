@@ -24,7 +24,7 @@ public class Utile{
             f1 = new File(temp1);
             f2 = new File(temp2);
             try(DataOutputStream dos1 = new DataOutputStream(new FileOutputStream(f1)); DataOutputStream dos2 = new DataOutputStream(new FileOutputStream(f2)); DataInputStream dis = new DataInputStream(new FileInputStream(f));){
-                Scaner sc = new Scanner(dis)
+                Scanner sc = new Scanner(dis);
                 boolean primo = true;
                 int pre = Integer.MIN_VALUE;
                 int cor = dis.readInt();
@@ -61,7 +61,7 @@ public class Utile{
 
     public static boolean crescente(File f){
         try(DataInputStream dos = new DataInputStream(new FileInputStream(f));){
-            Scanner sc = new Scaner(dos);
+            Scanner sc = new Scanner(dos);
             int pre = Integer.MIN_VALUE;
             int cor = dos.readInt();
             while(sc.hasNext()){

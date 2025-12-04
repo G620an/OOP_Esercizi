@@ -1,4 +1,4 @@
-package Punto;
+package oop.Punto;
 
 public class PolarPoint2D implements Point2D{
     private double theta;
