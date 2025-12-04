@@ -117,7 +117,7 @@ public class Utile{
         try(DataInputStream dis = new DataInputStream(f)){
             int cor;
             Scanner sc = new Scanner(dis);
-            while(sc.hasNext(){
+            while(sc.hasNext()){
                 cor = dis.readInt();
                 System.out.println(cor);
             }
