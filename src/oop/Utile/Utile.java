@@ -7,6 +7,10 @@ public class Utile{
 
     private static int bufferSize = 8192;
 
+    public static void setBufferSize(int bufferSize){
+        Utile.bufferSize = bufferSize;
+    }
+
     public static void generaRandom(OutputStream out, long n)throws IOException{
        Random r = new Random();
        DataOutputStream dos = new DataOutputStream(out);
@@ -27,11 +31,12 @@ public class Utile{
             f2 = new File(temp2);
             try(DataOutputStream dos1 = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(f1), bufferSize)); DataOutputStream dos2 = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(f2), bufferSize)); DataInputStream dis = new DataInputStream(new BufferedInputStream(new FileInputStream(f), bufferSize));){
                 boolean primo = true;
-                Scanner sc = new Scanner(dis);
+                long c = f.length();
                 int pre = Integer.MIN_VALUE;
                 int cor = 0;
-                while(sc.hasNext()){
+                while(c > 3){
                     cor = dis.readInt();
+                    c -= 4;
                     if(pre <= cor){
                         if(primo){
                             dos1.writeInt(cor);
@@ -39,7 +44,11 @@ public class Utile{
                             dos2.writeInt(cor);
                         }
                     }else{
-                        primo = !primo;
+                        if(primo){
+                            primo = false;
+                        }else{
+                            primo = true;
+                        }
                         if(primo){
                             dos1.writeInt(cor);
                         }else{
@@ -66,11 +75,12 @@ public class Utile{
 
     public static boolean crescente(File f){
         try(DataInputStream dis = new DataInputStream(new BufferedInputStream(new FileInputStream(f), bufferSize));){
-            Scanner sc = new Scanner(dis);
             int pre = Integer.MIN_VALUE;
             int cor = 0;
-            while(sc.hasNext()){
+            long c = f.length(); //Contatore per tenere traccia di quanti byte sono stati letti
+            while(c > 3){
                 cor = dis.readInt();
+                c -= 4;
                 if(pre > cor){
                     return false;
                 }
@@ -84,29 +94,34 @@ public class Utile{
 
     public static void ricostruisci(File f, File f1, File f2){
         try(DataInputStream dis1 = new DataInputStream(new BufferedInputStream(new FileInputStream(f1), bufferSize)); DataInputStream dis2 = new DataInputStream(new BufferedInputStream(new FileInputStream(f2), bufferSize)); DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(f), bufferSize))){
-            int uno = 0;
-            int due = 0;
-            Scanner sc1 = new Scanner(dis1);
-            Scanner sc2 = new Scanner(dis2);
-            while(sc1.hasNext() && sc2.hasNext()){
+            int uno = dis1.readInt();
+            int due = dis2.readInt();
+            long c1 = f1.length() - 4;
+            long c2 = f2.length() - 4;
+            while(c1 > 3 && c2 > 3){
                 if(uno <= due){
-                    uno = dis1.readInt();
                     dos.writeInt(uno);
+                    uno = dis1.readInt();
+                    c1 -= 4;
                 }else{
-                    due = dis2.readInt();
                     dos.writeInt(due);
+                    due = dis2.readInt();
+                    c2 -= 4;
                 }
             }
-            if(sc1.hasNext()){
+            dos.flush();
+            if(c1 > 3){
                 int cor = 0;
-                while(sc1.hasNext()){
+                while(c1 > 3){
                     cor = dis1.readInt();
+                    c1 -= 4;
                     dos.writeInt(cor);
                 }
-            }else if(sc2.hasNext()){
+            }else if(c2 > 3){
                 int cor = 0;
-                while(sc2.hasNext()){
+                while(c2 > 3){
                     cor = dis2.readInt();
+                    c2 -= 4;
                     dos.writeInt(cor);
                 }
             }
@@ -116,12 +131,13 @@ public class Utile{
         }
     }
 
-    public static void printFile(FileInputStream f){
-        try(DataInputStream dis = new DataInputStream(f)){
+    public static void printFile(FileInputStream f, long n){
+        try(DataInputStream dis = new DataInputStream(new BufferedInputStream(f,  bufferSize));){
+            long c = n;
             int cor = 0;
-            Scanner sc = new Scanner(dis);
-            while(sc.hasNext()){
+            while(c > 3){
                 cor = dis.readInt();
+                c -= 4;
                 System.out.println(cor);
             }
         }catch(IOException e){

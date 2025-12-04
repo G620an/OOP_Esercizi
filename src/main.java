@@ -19,14 +19,15 @@ public static void main(String[] args){
   }
    */
 
-  long n = 1024; //sono 4 MB di roba perchè gli int sono a 4 byte
+  long n = 5; //sono 4 MB di roba perchè gli int sono a 4 byte
   String path = "prova.dat";
+  File file = new File(path);
   try{
-      Utile.generaRandom(new BufferedOutputStream(new FileOutputStream(path), 8128), n);
-      Utile.printFile(new FileInputStream(path));
-      Utile.naturalMergeSort(new File(path));
-      System.out.println("-----------------");
-      Utile.printFile(new FileInputStream(path));
+      Utile.generaRandom(new BufferedOutputStream(new FileOutputStream(path), 8192), n);
+      Utile.printFile(new FileInputStream(file), file.length());
+      Utile.naturalMergeSort(file);
+      System.out.println("-------------------------------------------");
+      Utile.printFile(new FileInputStream(file), file.length());
   }catch(IOException e){
       e.printStackTrace();
   }
