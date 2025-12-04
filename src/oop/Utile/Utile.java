@@ -5,6 +5,8 @@ import java.util.*;
 public class Utile{
     private Utile(){}
 
+    private static int bufferSize = 8192;
+
     public static void generaRandom(OutputStream out, long n)throws IOException{
        Random r = new Random();
        DataOutputStream dos = new DataOutputStream(out);
@@ -23,12 +25,13 @@ public class Utile{
         while(!crescente(f)){
             f1 = new File(temp1);
             f2 = new File(temp2);
-            try(DataOutputStream dos1 = new DataOutputStream(new FileOutputStream(f1)); DataOutputStream dos2 = new DataOutputStream(new FileOutputStream(f2)); DataInputStream dis = new DataInputStream(new FileInputStream(f));){
-                Scanner sc = new Scanner(dis);
+            try(DataOutputStream dos1 = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(f1), bufferSize)); DataOutputStream dos2 = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(f2), bufferSize)); DataInputStream dis = new DataInputStream(new BufferedInputStream(new FileInputStream(f), bufferSize));){
                 boolean primo = true;
+                Scanner sc = new Scanner(dis);
                 int pre = Integer.MIN_VALUE;
-                int cor = dis.readInt();
+                int cor = 0;
                 while(sc.hasNext()){
+                    cor = dis.readInt();
                     if(pre <= cor){
                         if(primo){
                             dos1.writeInt(cor);
@@ -44,72 +47,70 @@ public class Utile{
                         }
                     }
                     pre = cor;
-                    cor = dis.readInt();
                 }
+                dos1.flush();
+                dos2.flush();
                 ricostruisci(f, f1, f2);
             }catch (IOException e){
                 e.printStackTrace();
+                System.out.println("natural merge sort error");
             }
         }
         try{
             f1.delete();
             f2.delete();
-        }catch(NullPointerException nsfe){
+        }catch(NullPointerException npe){
             System.out.println("File già ordinato in modo crescente");
         }
     }
 
     public static boolean crescente(File f){
-        try(DataInputStream dis = new DataInputStream(new FileInputStream(f));){
+        try(DataInputStream dis = new DataInputStream(new BufferedInputStream(new FileInputStream(f), bufferSize));){
             Scanner sc = new Scanner(dis);
             int pre = Integer.MIN_VALUE;
-            int cor = dis.readInt();
+            int cor = 0;
             while(sc.hasNext()){
+                cor = dis.readInt();
                 if(pre > cor){
                     return false;
                 }
                 pre = cor;
-                cor = dis.readInt();
             }
-        }catch(IOException e) {
+        }catch(IOException e){
             return false;
         }
         return true;
     }
 
     public static void ricostruisci(File f, File f1, File f2){
-        boolean stato = false;
-        try(DataInputStream dis1 = new DataInputStream(new FileInputStream(f1)); DataInputStream dis2 = new DataInputStream(new FileInputStream(f2)); DataOutputStream dos = new DataOutputStream(new FileOutputStream(f))){
-            int uno = dis1.readInt();
-            int due = dis2.readInt();
+        try(DataInputStream dis1 = new DataInputStream(new BufferedInputStream(new FileInputStream(f1), bufferSize)); DataInputStream dis2 = new DataInputStream(new BufferedInputStream(new FileInputStream(f2), bufferSize)); DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(f), bufferSize))){
+            int uno = 0;
+            int due = 0;
             Scanner sc1 = new Scanner(dis1);
             Scanner sc2 = new Scanner(dis2);
             while(sc1.hasNext() && sc2.hasNext()){
                 if(uno <= due){
-                    dos.writeInt(uno);
-                    stato = false;
                     uno = dis1.readInt();
+                    dos.writeInt(uno);
                 }else{
-                    dos.writeInt(due);
-                    stato = true;
                     due = dis2.readInt();
+                    dos.writeInt(due);
                 }
             }
-            if(stato){
-                int cor = dis1.readInt();
+            if(sc1.hasNext()){
+                int cor = 0;
                 while(sc1.hasNext()){
-                    dos.writeInt(cor);
                     cor = dis1.readInt();
-                }
-            }else{
-                int cor = dis2.readInt();
-                while(sc2.hasNext()){
                     dos.writeInt(cor);
+                }
+            }else if(sc2.hasNext()){
+                int cor = 0;
+                while(sc2.hasNext()){
                     cor = dis2.readInt();
+                    dos.writeInt(cor);
                 }
             }
-
-
+            dos.flush();
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -117,7 +118,7 @@ public class Utile{
 
     public static void printFile(FileInputStream f){
         try(DataInputStream dis = new DataInputStream(f)){
-            int cor;
+            int cor = 0;
             Scanner sc = new Scanner(dis);
             while(sc.hasNext()){
                 cor = dis.readInt();
