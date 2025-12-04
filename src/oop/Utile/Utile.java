@@ -44,11 +44,7 @@ public class Utile{
                             dos2.writeInt(cor);
                         }
                     }else{
-                        if(primo){
-                            primo = false;
-                        }else{
-                            primo = true;
-                        }
+                        primo = !primo;
                         if(primo){
                             dos1.writeInt(cor);
                         }else{
