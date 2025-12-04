@@ -24,10 +24,11 @@ public class Utile{
             f1 = new File(temp1);
             f2 = new File(temp2);
             try(DataOutputStream dos1 = new DataOutputStream(new FileOutputStream(f1)); DataOutputStream dos2 = new DataOutputStream(new FileOutputStream(f2)); DataInputStream dis = new DataInputStream(new FileInputStream(f));){
+                Scaner sc = new Scanner(dos)
                 boolean primo = true;
                 int pre = Integer.MIN_VALUE;
                 int cor = dis.readInt();
-                while((byte)cor != (byte)-1){
+                while(sc.hasNext()){
                     if(pre <= cor){
                         if(primo){
                             dos1.writeInt(cor);
