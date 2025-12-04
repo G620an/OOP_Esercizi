@@ -80,7 +80,8 @@ public class Utile{
         try(DataInputStream dis1 = new DataInputStream(new FileInputStream(f1)); DataInputStream dis2 = new DataInputStream(new FileInputStream(f2)); DataOutputStream dos = new DataOutputStream(new FileOutputStream(f))){
             int uno = dis1.readInt();
             int due = dis2.readInt();
-
+            Scanner sc1 = new Scanner(dis1);
+            Scanner sc2 = new Scanner(dis2);
             while((byte)uno != (byte)-1 && (byte)due != (byte)-1){
                 if(uno <= due){
                     dos.writeInt(uno);
@@ -99,6 +100,7 @@ public class Utile{
                     cor = dis1.readInt();
                 }
             }else{
+                
                 int cor = dis2.readInt();
                 while((byte)cor != (byte)-1){
                     dos.writeInt(cor);
