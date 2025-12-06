@@ -6,6 +6,7 @@ import java.util.*;
 public class Range implements Iterable<Integer>{
     private int start;
     private int end;
+    
     public Range(int start, int end){
         if(start < 0 || end <= start){
             throw new IllegalArgumentException("L'inizo deve venire prima della fine e deve essere positivo.");

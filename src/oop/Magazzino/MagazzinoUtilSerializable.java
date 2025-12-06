@@ -3,11 +3,11 @@ import java.io.*;
 
 public class MagazzinoUtilSerializable{
   private MagazzinoUtilSerializable(){}
-  /*
-  public void salvaMagazzino(String path, Magazzino magazzino){
-    try(BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(path)) ){
+
+  public void salvaMagazzino(String path, Magazzino magazzino)throws IOException{
+    try(ObjectOutputStream ous  = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(path)))){
       for(Materiale m : magazzino){
-        bos.writeObject(m);
+        ous.writeObject(m);
       }
     }catch(IOException e){
       e.printStackTrace();
@@ -15,22 +15,20 @@ public class MagazzinoUtilSerializable{
   }
   
   public Magazzino caricaMagazzino(String path){
-    try(BufferedInputStream bsi = new BufferedInputStream(new FileInputStream(path))){
       Magazzino magazzino = new Magazzino();
-      boolean continua = true;
-      while(continua){
-        Materiale m = bsi.readObject();
+    try(ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(new FileInputStream(path)))){
+      while(true){
+        Materiale m = (Materiale)ois.readObject();
         if(m == null){
-          continua = false;
           break;
         }
-        magazzino.append(m);
+        magazzino.add(m);
       }
-      return magazzino;
-    }catch(IOException e){
+    }catch(ClassNotFoundException | IOException e){ //Specifichiamo due eccezioni
       e.printStackTrace();
     }
+    return magazzino;
   }
 
-   */
+
 } 
