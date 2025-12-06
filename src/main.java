@@ -21,7 +21,6 @@ public static void main(String[] args){
   }
    */
 
-    /*
   long n = 5; //sono 4 MB di roba perchè gli int sono a 4 byte
   String path = "prova.dat";
   File file = new File(path);
@@ -34,10 +33,8 @@ public static void main(String[] args){
   }catch(IOException e){
       e.printStackTrace();
   }
-     */
-    for(int i : new Range(1, 10)){
-        System.out.println(i);
-    }
+
+
 
 
 

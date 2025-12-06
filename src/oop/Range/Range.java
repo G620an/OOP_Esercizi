@@ -7,30 +7,24 @@ public class Range implements Iterable<Integer>{
     private int start;
     private int end;
     public Range(int start, int end){
-        if(end <= start){
-            throw new IllegalArgumentException("L'inizo deve venire prima della fine");
+        if(start < 0 || end <= start){
+            throw new IllegalArgumentException("L'inizo deve venire prima della fine e deve essere positivo.");
         }
         this.start = start;
         this.end = end;
     }
 
     public Iteratore iterator(){
-        return new Iteratore(start, end);
+        return new Iteratore();
     }
 
     private class Iteratore implements Iterator<Integer> {
-        private int end;
-        private int cor;
+        private int cor = Range.this.start;
         boolean rimuovi = false;
-
-        public Iteratore(int start, int end){
-            this.cor = start;
-            this.end = end;
-        }
 
         @Override
         public boolean hasNext(){
-            if(cor < end){
+            if(cor < Range.this.end){
                 return true;
             }else{
                 return false;
