@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0240a4a0-adc6-4dea-8a65-01f31bc1746c" name="Changes" comment="Modified">
-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oop/Magazzino/Magazzino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Magazzino/Magazzino.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oop/Magazzino/MagazzinoUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oop/Magazzino/MagazzinoUtilSerializable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Magazzino/MagazzinoUtilSerializable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oop/Magazzino/Materiale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Magazzino/Materiale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oop/Range/Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Range/Range.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Codice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/CorpoCeleste.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/CorpoCelesteAbstract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Distanza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Massa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Pianeta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Raggio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Stella.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Tipo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +25,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -132,7 +136,7 @@
       <option name="presentableId" value="Default" />
       <updated>1762960159144</updated>
       <workItem from="1762960163215" duration="20192000" />
-      <workItem from="1764085006586" duration="41568000" />
+      <workItem from="1764085006586" duration="45724000" />
     </task>
     <task id="LOCAL-00001" summary="Autore e Nazionalità">
       <option name="closed" value="true" />
@@ -342,7 +346,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765044554668</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Modified">
+      <option name="closed" value="true" />
+      <created>1765045619085</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1765045619085</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
