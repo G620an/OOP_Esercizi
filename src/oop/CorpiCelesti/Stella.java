@@ -69,7 +69,8 @@ public class Stella extends CorpoCelesteAbstract implements Iterable<Pianeta>{
 
     public void addPianeta(Massa massa, Distanza distanza, Raggio raggio){
         String numero = Integer.toString(pianeti.size() + 1);
-        Codice codice = new Codice(this.getCodice().prefix(), this.getCodice().suffix() , numero);
+        String code = this.getCodice().prefix() + "-" + this.getCodice().suffix() + "-" + numero;
+        Codice codice = new Codice(code);
         pianeti.add(new Pianeta(codice, massa, distanza, raggio));
     }//Il pianeta può essere aggiunto solo dai suoi parametri e non come oggetto già definito, questo perchè deve esserci
     //una corrispondenza tra codice stella e codice pianeti attorno alla stella
