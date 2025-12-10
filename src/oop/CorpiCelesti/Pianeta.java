@@ -7,7 +7,7 @@ public class Pianeta extends CorpoCelesteAbstract{
     private Raggio raggio;
     private String nickname;
 
-    public Pianeta(Codice codice , Massa massa, Distanza distanza, Raggio raggio) {
+    public Pianeta(Codice codice , Massa massa, Distanza distanza, Raggio raggio){
         if(codice == null || massa == null || distanza == null || raggio == null){
             throw new IllegalArgumentException("Uno dei campi è null");
         }

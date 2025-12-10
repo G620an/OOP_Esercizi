@@ -1,6 +1,8 @@
 package oop.CorpiCelesti;
 
-public record Distanza(double distanza){
+import java.io.Serializable;
+
+public record Distanza(double distanza)implements Serializable {
     public Distanza{
         if(distanza < 0){
             throw new IllegalArgumentException("La distanza non può essere negativa");

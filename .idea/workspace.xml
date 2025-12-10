@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0240a4a0-adc6-4dea-8a65-01f31bc1746c" name="Changes" comment="Modified">
-      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Codice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/CorpoCeleste.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/CorpoCelesteAbstract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Distanza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Massa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Pianeta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Raggio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Stella.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Tipo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Galassia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/CorpiCelesti/Codice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Codice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/CorpiCelesti/CorpoCeleste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/CorpoCeleste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/CorpiCelesti/CorpoCelesteAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/CorpoCelesteAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/CorpiCelesti/Distanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Distanza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/CorpiCelesti/Massa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Massa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/CorpiCelesti/Pianeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Pianeta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/CorpiCelesti/Raggio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Raggio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/CorpiCelesti/Stella.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Stella.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/CorpiCelesti/Tipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Tipo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +27,8 @@
       <list>
         <option value="Record" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -91,7 +92,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "advanced.settings",
+    "settings.editor.selected.configurable": "configurable.group.build",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -123,8 +124,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
       </set>
     </attachedChunks>
   </component>
@@ -136,7 +137,8 @@
       <option name="presentableId" value="Default" />
       <updated>1762960159144</updated>
       <workItem from="1762960163215" duration="20192000" />
-      <workItem from="1764085006586" duration="45724000" />
+      <workItem from="1764085006586" duration="46133000" />
+      <workItem from="1765050222276" duration="8440000" />
     </task>
     <task id="LOCAL-00001" summary="Autore e Nazionalità">
       <option name="closed" value="true" />
@@ -354,7 +356,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765045619085</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Modified">
+      <option name="closed" value="true" />
+      <created>1765049790908</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1765049790908</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,5 +1,7 @@
 package oop.CorpiCelesti;
 
-public enum Tipo {
+import java.io.Serializable;
+
+public enum Tipo implements Serializable {
     SUPERGIGANTEROSSA, GIGANTEROSSA, GIGANTEBLUE, NANAGIALLA, NANAROSSA, NANABIANCA, NANABRUNA, STELLADINEUTRONI, PULSAR;
 }

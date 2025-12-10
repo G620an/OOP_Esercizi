@@ -1,6 +1,8 @@
 package oop.CorpiCelesti;
 
-public record Raggio(double raggio){
+import java.io.Serializable;
+
+public record Raggio(double raggio)implements Serializable {
     public Raggio{
         if(raggio < 0){
             throw new IllegalArgumentException("Il raggio non può essere negativo");
