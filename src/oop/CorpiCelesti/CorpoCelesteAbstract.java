@@ -22,7 +22,7 @@ public abstract class CorpoCelesteAbstract implements CorpoCeleste, Comparable<C
 
     @Override
     public String toString(){
-        return "Codice: " + getCodice() + ", Massa[kg]: " + getMassa() + ", Distanza[al]: " + getDistanzaDallaTerra() + ", Raggio[km]: " + getRaggio() + ", Nickname: " + getNickname();
+        return " Codice: " + getCodice() + ", Massa[kg]: " + getMassa() + ", Distanza[al]: " + getDistanzaDallaTerra() + ", Raggio[km]: " + getRaggio() + ", Nickname: " + getNickname();
     }
 
     @Override

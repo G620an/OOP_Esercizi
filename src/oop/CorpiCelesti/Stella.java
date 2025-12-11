@@ -3,6 +3,7 @@ package oop.CorpiCelesti;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Random;
 
 public class Stella extends CorpoCelesteAbstract implements Iterable<Pianeta>{
     private Distanza distanza;
@@ -36,26 +37,26 @@ public class Stella extends CorpoCelesteAbstract implements Iterable<Pianeta>{
 
     @Override
     public Codice getCodice() {
-        return codice;
+        return this.codice;
     }
 
     @Override
     public Raggio getRaggio() {
-        return raggio;
+        return this.raggio;
     }
 
     @Override
     public Massa getMassa(){
-        return massa;
+        return this.massa;
     }
 
     @Override
     public Distanza getDistanzaDallaTerra(){
-        return distanza;
+        return this.distanza;
     }
 
     public Tipo getTipo(){
-        return tipo;
+        return this.tipo;
     }
 
     @Override
@@ -63,15 +64,18 @@ public class Stella extends CorpoCelesteAbstract implements Iterable<Pianeta>{
         if(nickname == null){
             return "None";
         }else{
-            return nickname;
+            return this.nickname;
         }
     }
 
-    public void addPianeta(Massa massa, Distanza distanza, Raggio raggio){
-        String numero = Integer.toString(pianeti.size() + 1);
+    public void addPianeta(Massa massa, Raggio raggio){
+        Random r = new Random();
+        String numero = Integer.toString(pianeti.size());
         String code = this.getCodice().prefix() + "-" + this.getCodice().suffix() + "-" + numero;
         Codice codice = new Codice(code);
-        pianeti.add(new Pianeta(codice, massa, distanza, raggio));
+        double dist = r.nextDouble()*1e-6 + this.getDistanzaDallaTerra().getDistanzaAnniLuce();
+        Distanza d = new Distanza(dist);
+        pianeti.add(new Pianeta(codice, massa, d , raggio));
     }//Il pianeta può essere aggiunto solo dai suoi parametri e non come oggetto già definito, questo perchè deve esserci
     //una corrispondenza tra codice stella e codice pianeti attorno alla stella
 
@@ -95,6 +99,14 @@ public class Stella extends CorpoCelesteAbstract implements Iterable<Pianeta>{
 
     public Iterator<Pianeta> iterator(){
         return pianeti.iterator();
+    }
+
+    public String stampaPianeti(){
+        StringBuilder sb = new StringBuilder();
+        for(Pianeta p : this){
+            sb.append(p).append('\n');
+        }
+        return sb.toString();
     }
 
 }

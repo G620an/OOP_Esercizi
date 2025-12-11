@@ -1,6 +1,7 @@
 import oop.Utile.Utile;
 import oop.Range.*;
 import oop.Punto.*;
+import oop.CorpiCelesti.*;
 
 public static void main(String[] args){
   /*
@@ -20,7 +21,7 @@ public static void main(String[] args){
     throw new IllegalArgumentException("Parametro di cifratura errato");
   }
    */
-
+/*
   long n = 5; //sono 4 MB di roba perchè gli int sono a 4 byte
   String path = "prova.dat";
   File file = new File(path);
@@ -33,6 +34,11 @@ public static void main(String[] args){
   }catch(IOException e){
       e.printStackTrace();
   }
+
+ */
+Galassia g = CorpiCelestiUtil.generaGalassia("Via Lattea" , 10);
+System.out.println(g.toString());
+
   
 
 

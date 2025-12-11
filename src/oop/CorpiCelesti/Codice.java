@@ -5,7 +5,7 @@ import java.util.regex.*;
 
 public class Codice implements Serializable {
     private static final String regex = "([A-Za-z]{8})-([A-Za-z]{5})-?([0-9])*";
-    private static Pattern   pattern = Pattern.compile(regex);//Fortunatamente java non fa match globali automatici
+    private static Pattern pattern = Pattern.compile(regex); //Fortunatamente java non fa match globali automatici
     private String codice;
     private String prefix;
     private String suffix;
@@ -14,14 +14,17 @@ public class Codice implements Serializable {
         if(codice == null){
             throw new IllegalArgumentException("Codice non può essere null");
         }
+        codice = codice.trim();
         Matcher match = pattern.matcher(codice);
         if(!match.matches())throw new IllegalArgumentException("Codice non valido");
         int c = match.groupCount();
-        match.find();
         prefix = match.group(1);
         suffix = match.group(2);
-        if(match.groupCount() != 3)throw new IllegalArgumentException("Codice non valido");
-        number = match.group(3);
+        this.codice = prefix + "-" + suffix;
+        if(match.groupCount() == 3){
+            number = match.group(3);
+            this.codice = codice + "-" + number;
+        }
     }
 
     //prefix è il sistema stellare ; suffix è la stella ; number è il numero progressivo dal più vicino al lontano dei pianeti

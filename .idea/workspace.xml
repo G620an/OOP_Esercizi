@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0240a4a0-adc6-4dea-8a65-01f31bc1746c" name="Changes" comment="Modified">
+      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/CorpiCelestiUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Indirizzo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/SistemaStellare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oop/Biblioteca/Autore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Biblioteca/Autore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oop/Biblioteca/Genere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Biblioteca/Genere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oop/Biblioteca/ISBN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Biblioteca/ISBN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oop/Biblioteca/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Biblioteca/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/CorpiCelesti/Codice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Codice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/CorpiCelesti/CorpoCelesteAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/CorpoCelesteAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/CorpiCelesti/Galassia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Galassia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/CorpiCelesti/Stella.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/CorpiCelesti/Stella.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +136,7 @@
       <updated>1762960159144</updated>
       <workItem from="1762960163215" duration="20192000" />
       <workItem from="1764085006586" duration="46133000" />
-      <workItem from="1765050222276" duration="9551000" />
+      <workItem from="1765050222276" duration="19056000" />
     </task>
     <task id="LOCAL-00001" summary="Autore e Nazionalità">
       <option name="closed" value="true" />
@@ -374,7 +378,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765395560786</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Modified">
+      <option name="closed" value="true" />
+      <created>1765454170006</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1765454170006</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
