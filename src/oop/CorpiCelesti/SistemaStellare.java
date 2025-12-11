@@ -43,9 +43,11 @@ public class SistemaStellare implements Comparable<SistemaStellare>, Serializabl
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append("SistemaStellare{\n");
         for(Stella s : this){
-            sb.append(" Stella: ").append(s).append(" Pianeti: ").append(s.getPianeti()).append('\n');
+            sb.append(" Stella: ").append(s).append(s.stampaPianeti()).append("\n");
         }
+        sb.append("\n}");
         return sb.toString();
     }
 

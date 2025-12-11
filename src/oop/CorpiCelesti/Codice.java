@@ -3,7 +3,7 @@ package oop.CorpiCelesti;
 import java.io.Serializable;
 import java.util.regex.*;
 
-public class Codice implements Serializable {
+public class Codice implements Serializable, Comparable<Codice>{
     private static final String regex = "([A-Za-z]{8})-([A-Za-z]{5})-?([0-9])*";
     private static Pattern pattern = Pattern.compile(regex); //Fortunatamente java non fa match globali automatici
     private String codice;
@@ -42,12 +42,22 @@ public class Codice implements Serializable {
         return suffix;
     }
 
-    public String number(){
-        return number;
+    public String number() {
+        if(number == null){
+            return "";
+        }else{
+            return number;
+        }
     }
 
     @Override
     public String toString(){
         return getCodice();
     }
+
+    @Override
+    public int compareTo(Codice o) {
+        return this.getCodice().compareTo(o.getCodice());
+    }
+
 }

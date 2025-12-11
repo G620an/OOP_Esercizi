@@ -69,7 +69,7 @@ public class Galassia implements Serializable, Iterable<SistemaStellare>, Compar
     public String toString(){
         StringBuilder sb = new StringBuilder();
         for(SistemaStellare sl : this){
-            sb.append("Sistema Stellare: ").append(sl);
+            sb.append("Sistema Stellare: ").append(sl).append("\n");
         }
         return sb.toString();
     }

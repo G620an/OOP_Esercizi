@@ -103,9 +103,11 @@ public class Stella extends CorpoCelesteAbstract implements Iterable<Pianeta>{
 
     public String stampaPianeti(){
         StringBuilder sb = new StringBuilder();
+        sb.append("\nPianeti{");
         for(Pianeta p : this){
-            sb.append(p).append('\n');
+            sb.append("\n").append(p);
         }
+        sb.append("\n}");
         return sb.toString();
     }
 
