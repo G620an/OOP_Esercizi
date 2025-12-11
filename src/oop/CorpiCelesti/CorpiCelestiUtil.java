@@ -76,7 +76,7 @@ public class CorpiCelestiUtil {
         Random r = new Random();
         Indirizzo ind = new Indirizzo(CorpiCelestiUtil.generaCodice(8));
         SistemaStellare st = new SistemaStellare(ind);
-        int n = r.nextInt(100);
+        int n = r.nextInt(50);
         for(int i = 0; i < n; i++){
             Stella s = CorpiCelestiUtil.generaStella();
             CorpiCelestiUtil.generaPianeta(s);
@@ -100,10 +100,10 @@ public class CorpiCelestiUtil {
         String c = CorpiCelestiUtil.generaCodice(8) + "-";
         c = c + CorpiCelestiUtil.generaCodice(5);
         Codice codice = new Codice(c);
-        double raggio = r.nextDouble()*1e+7;
-        double molt = r.nextInt();
-        double distanza = r.nextDouble()*molt;
-        double massa = r.nextDouble()+1e+15;
+        double raggio = r.nextDouble()*1e+7*r.nextDouble();
+        double molt = r.nextInt(100000);
+        double distanza = r.nextDouble()*molt*r.nextDouble();
+        double massa = r.nextDouble()+1e+15*r.nextDouble();
         if(raggio < 0) raggio = -raggio;
         if(distanza < 0) distanza = -distanza;
         if(massa < 0) massa = -massa;

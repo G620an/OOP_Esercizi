@@ -36,7 +36,7 @@ public static void main(String[] args){
   }
 
  */
-Galassia g = CorpiCelestiUtil.generaGalassia("Via Lattea" , 1);
+Galassia g = CorpiCelestiUtil.generaGalassia("Via Lattea" , 10);
 System.out.println(g.toString());
 
   
