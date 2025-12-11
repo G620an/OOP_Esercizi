@@ -1,8 +1,9 @@
 package oop.Biblioteca;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Autore implements Comparable<Autore>{
+public class Autore implements Comparable<Autore>, Serializable{
     private String nome;
     private String cognome;
     private String nazio;

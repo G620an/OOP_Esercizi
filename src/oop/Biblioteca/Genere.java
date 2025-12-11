@@ -1,6 +1,8 @@
 package oop.Biblioteca;
 
-public enum Genere {
+import java.io.Serializable;
+
+public enum Genere implements Serializable{
     GIALLO , ROSA , FANTASCIENZA, SAGGIO, FANTASY;
     @Override
     public String toString(){
