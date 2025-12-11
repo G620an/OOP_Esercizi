@@ -33,7 +33,7 @@ public class Galassia implements Serializable, Iterable<SistemaStellare>, Compar
     }
 
     public void addSistemaStellare(SistemaStellare s){
-        this.getGalassia().put(s.getIndirizzo(), s);
+        galassia.put(s.getIndirizzo(), s);
     }
 
     public String getNome() {
@@ -68,9 +68,11 @@ public class Galassia implements Serializable, Iterable<SistemaStellare>, Compar
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
+        sb.append("Galassia: " + this.getNome() + " {");
         for(SistemaStellare sl : this){
-            sb.append("Sistema Stellare: ").append(sl).append("\n");
+            sb.append("\n").append("  Sistema Stellare: " + sl.stampa()).append(sl).append("\n");
         }
+        sb.append("}");
         return sb.toString();
     }
 

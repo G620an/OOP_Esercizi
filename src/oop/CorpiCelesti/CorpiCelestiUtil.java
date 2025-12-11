@@ -15,21 +15,59 @@ public class CorpiCelestiUtil {
         return g;
     }
 
+    public static Tipo generaTipo(){
+        Random r = new Random();
+        int n = r.nextInt(8);
+        switch(n){
+            case 0:{
+                return Tipo.SUPERGIGANTEROSSA;
+            }
+            case 1:{
+                return Tipo.GIGANTEBLUE;
+            }
+            case 2:{
+                return Tipo.NANAROSSA;
+            }
+            case 3:{
+                return Tipo.STELLADINEUTRONI;
+            }
+            case 4:{
+                return Tipo.PULSAR;
+            }
+            case 5:{
+                return Tipo.GIGANTEROSSA;
+            }
+            case 6:{
+                return Tipo.NANAGIALLA;
+            }
+            case 7:{
+                return Tipo.NANABIANCA;
+            }
+            case 8:{
+                return Tipo.NANABRUNA;
+            }
+        }
+        return null;
+    }
+
     public static String generaCodice(int n){
         StringBuilder sb = new StringBuilder();
         Random r = new Random();
         for(int i=0 ; i<n ; i++) {
             boolean exit = false;
-            char s = 'a';
-            /*
+            char s = ' ';
             while (!exit) {
-                s = (char)(r.nextInt(256));
-                if (Character.isLetter(s)) {
+                s = (char)(r.nextInt(26) + 'a');
+                if (Character.isLetter(s)){
                     exit = true;
                 }
             }
-            */
-            sb.append(s);
+            int k = r.nextInt(10);
+            if(k%2 == 0){
+                sb.append(Character.toUpperCase(s));
+            }else{
+                sb.append(s);
+            }
         }
         return sb.toString();
     }
@@ -69,6 +107,6 @@ public class CorpiCelestiUtil {
         if(raggio < 0) raggio = -raggio;
         if(distanza < 0) distanza = -distanza;
         if(massa < 0) massa = -massa;
-        return new Stella(codice,  new Raggio(raggio) , new Distanza(distanza) , new Massa(massa) , Tipo.NANAGIALLA);
+        return new Stella(codice,  new Raggio(raggio) , new Distanza(distanza) , new Massa(massa) , CorpiCelestiUtil.generaTipo());
     }
 }

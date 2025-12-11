@@ -53,6 +53,12 @@ public class Pianeta extends CorpoCelesteAbstract{
         }
     }
 
+    @Override
+    public String toString(){
+        return " Codice: " + this.getCodice().prefix() + "-" + this.getCodice().suffix() + "-" + this.getCodice().number() + ", Massa[kg]: " + getMassa() + ", Distanza[al]: " + getDistanzaDallaTerra() + ", Raggio[km]: " + getRaggio() + ", Nickname: " + getNickname();
+    }
+
+
 
 
 

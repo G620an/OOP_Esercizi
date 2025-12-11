@@ -40,14 +40,18 @@ public class SistemaStellare implements Comparable<SistemaStellare>, Serializabl
         return this.getIndirizzo().compareTo(o.getIndirizzo());
     }
 
+    public String stampa(){
+        return "Indirizzo: " + this.getIndirizzo();
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("SistemaStellare{\n");
+        sb.append("  {\n");
         for(Stella s : this){
-            sb.append(" Stella: ").append(s).append(s.stampaPianeti()).append("\n");
+            sb.append("   Stella: ").append(s).append(s.stampaPianeti()).append("\n");
         }
-        sb.append("\n}");
+        sb.append("   }");
         return sb.toString();
     }
 

@@ -103,12 +103,18 @@ public class Stella extends CorpoCelesteAbstract implements Iterable<Pianeta>{
 
     public String stampaPianeti(){
         StringBuilder sb = new StringBuilder();
-        sb.append("\nPianeti{");
+        sb.append("\n    Pianeti:{");
         for(Pianeta p : this){
-            sb.append("\n").append(p);
+            sb.append("\n").append("     ").append(p);
         }
-        sb.append("\n}");
+        sb.append("\n    }");
         return sb.toString();
     }
+;
+    @Override
+    public String toString(){
+        return " Codice: " + this.getCodice().prefix() + "-" + this.getCodice().suffix() + ", Massa[kg]: " + getMassa() + ", Distanza[al]: " + getDistanzaDallaTerra() + ", Raggio[km]: " + getRaggio() + ", Tipo: " + getTipo() + ", Nickname: " + getNickname();
+    }
+
 
 }
