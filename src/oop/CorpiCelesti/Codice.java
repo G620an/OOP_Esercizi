@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.regex.*;
 
 public class Codice implements Serializable {
-    private String regex = "([A-Za-z]{8})-([A-Za-z]{5})-*([0-9])*";
+    private String regex = "([A-Za-z]{8})-([A-Za-z]{5})-?([0-9])*";
     private Pattern pattern;
     private String codice;
     private String prefix;
@@ -14,8 +14,7 @@ public class Codice implements Serializable {
         if(codice == null){
             throw new IllegalArgumentException("Codice non può essere null");
         }
-        pattern = Pattern.compile(regex);
-        Pattern pattern = Pattern.compile(regex); //Fortunatamente java non fa match globali automatici
+        pattern = Pattern.compile(regex);//Fortunatamente java non fa match globali automatici
         Matcher match = pattern.matcher(codice);
         if(!match.matches())throw new IllegalArgumentException("Codice non valido");
         int c = match.groupCount();
