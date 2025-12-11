@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Stella extends CorpoCelesteAbstract implements Iterable<Pianeta>, Comparable<Stella>{
+public class Stella extends CorpoCelesteAbstract implements Iterable<Pianeta>{
     private Distanza distanza;
     private Raggio raggio;
     private Codice codice;
@@ -95,10 +95,6 @@ public class Stella extends CorpoCelesteAbstract implements Iterable<Pianeta>, C
 
     public Iterator<Pianeta> iterator(){
         return pianeti.iterator();
-    }
-
-    public int compareTo(Stella s){
-        return this.getCodice().getCodice().compareTo(s.getCodice().getCodice());
     }
 
 }
