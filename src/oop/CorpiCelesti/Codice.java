@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.regex.*;
 
 public class Codice implements Serializable {
-    private String regex = "([A-Za-z]{8})-([A-Za-z]{5})-?([0-9])*";
-    private Pattern   pattern = Pattern.compile(regex);//Fortunatamente java non fa match globali automatici
+    private static final String regex = "([A-Za-z]{8})-([A-Za-z]{5})-?([0-9])*";
+    private static Pattern   pattern = Pattern.compile(regex);//Fortunatamente java non fa match globali automatici
     private String codice;
     private String prefix;
     private String suffix;
