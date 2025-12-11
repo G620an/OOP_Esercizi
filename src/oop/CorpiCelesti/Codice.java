@@ -18,6 +18,7 @@ public class Codice implements Serializable {
         Matcher match = pattern.matcher(codice);
         if(!match.matches())throw new IllegalArgumentException("Codice non valido");
         int c = match.groupCount();
+        match.find();
         prefix = match.group(1);
         suffix = match.group(2);
         if(match.groupCount() != 3)throw new IllegalArgumentException("Codice non valido");
