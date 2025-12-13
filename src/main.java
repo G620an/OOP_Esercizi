@@ -34,12 +34,9 @@ public static void main(String[] args){
   }catch(IOException e){
       e.printStackTrace();
   }
-
- */
-Galassia g = CorpiCelestiUtil.generaGalassia("Via Lattea" , 10);
-System.out.println(g.toString());
-
-  
+*/
+    Galassia g = CorpiCelestiUtil.generaGalassia("Via Lattea" , 10);
+    System.out.println(g.toString());
 
 
 }
