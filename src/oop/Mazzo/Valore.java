@@ -15,11 +15,12 @@ public enum Valore{
             case CINQUE -> "Cinque";
             case SEI -> "Sei";
             case SETTE -> "Sette";
-            case DONNA -> "Otto";
-            case CIUCCIO -> "Nove";
-            case RE -> "Dieci";
+            case DONNA -> "Donna";
+            case CIUCCIO -> "Ciuccio";
+            case RE -> "Re";
         };
     }
+
 
 
     public static Valore generaValore(){

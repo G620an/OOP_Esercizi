@@ -2,6 +2,7 @@ import oop.Utile.Utile;
 import oop.Range.*;
 import oop.Punto.*;
 import oop.CorpiCelesti.*;
+import oop.Mazzo.*;
 
 public static void main(String[] args){
   /*
@@ -40,7 +41,9 @@ public static void main(String[] args){
     System.out.println(g.toString());
     */
 
-
+Mazzo m = new Mazzo();
+m.ordina();
+System.out.println(m);
 
 
 }

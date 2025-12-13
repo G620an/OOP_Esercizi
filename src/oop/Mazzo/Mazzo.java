@@ -42,4 +42,27 @@ public class Mazzo implements Iterable<Carta>{
     public void addCarta(Seme s , Valore v){
         mazzo.add(new Carta(s, v));
     }
+
+    public void ordina(){
+        mazzo.sort(
+        (o1, o2)->{//Lambda Expression che sostituisce una inner class privata comparatore
+            if(o1.getSeme().equals(o2.getSeme())){
+                return o1.getValore().compareTo(o2.getValore());
+            }
+            return o1.getSeme().compareTo(o2.getSeme());
+        }
+        );
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("Mazzo{\n");
+        for(Carta c : this){
+            sb.append(c + "\n");
+        }
+        sb.append("}\n");
+        return sb.toString();
+    }
+
 }
