@@ -20,14 +20,6 @@ public class MazzoDiStoppa extends MazzoDaGioco{
         };
     }
 
-    public static int calcolaValoreMano(Giocatore g){
-        int n = 0;
-        for(Carta c : g){
-            n += MazzoDiStoppa.getValore(c);
-        }
-        return n;
-    }
-
     public static int compareGiocatori(Giocatore g1, Giocatore g2){
         return MazzoDiStoppa.calcolaValoreMano(g1)-MazzoDiStoppa.calcolaValoreMano(g2);
     }

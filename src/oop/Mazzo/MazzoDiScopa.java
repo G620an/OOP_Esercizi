@@ -5,7 +5,6 @@ public class MazzoDiScopa extends MazzoDaGioco{
         super();
     }
 
-
     public static int getValore(Carta c){
         Valore v = c.getValore();
         return switch(v){

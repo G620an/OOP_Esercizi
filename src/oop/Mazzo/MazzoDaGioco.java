@@ -15,4 +15,12 @@ public class MazzoDaGioco extends Mazzo{
         return MazzoDaGioco.getValore(c1) -  MazzoDaGioco.getValore(c2);
     }
 
+    public static int calcolaValoreMano(Giocatore g){
+        int n = 0;
+        for(Carta c : g){
+            n += MazzoDiStoppa.getValore(c);
+        }
+        return n;
+    }
+
 }
