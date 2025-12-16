@@ -36,14 +36,16 @@ public static void main(String[] args){
       e.printStackTrace();
   }
 */
-    /*
+
     Galassia g = CorpiCelestiUtil.generaGalassia("Via Lattea" , 10);
     System.out.println(g.toString());
-    */
 
+
+   /*
 Mazzo m = new Mazzo();
-m.ordina();
 System.out.println(m);
+
+*/
 
 
 }

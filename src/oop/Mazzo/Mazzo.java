@@ -59,7 +59,7 @@ public class Mazzo implements Iterable<Carta>{
         StringBuilder sb = new StringBuilder();
         sb.append("Mazzo{\n");
         for(Carta c : this){
-            sb.append(c + "\n");
+            sb.append(c).append("\n");
         }
         sb.append("}\n");
         return sb.toString();
