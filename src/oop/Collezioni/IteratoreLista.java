@@ -49,9 +49,13 @@ public class IteratoreLista<T> implements Iterator<T>{
         if(!okElimina) throw new IllegalStateException();
         if(forward){
             pre.next = cor.next; //Saltiamo il cor
-            pre.next.pre = pre; //Colleghiamo il corrente al pre giusto
+            cor.next.pre = pre; //cor.next mi manda al prossimo e con il pre definisco il pre
         }else{
-            cor.pre = pre.pre;
+            /*
+            cor.pre.next = pre.next;
+            pre.next.pre = cor.pre;
+            Da rivedere
+            */
         }
         okElimina = false;
     }
