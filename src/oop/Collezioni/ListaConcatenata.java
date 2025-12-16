@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class ListaConcatenata <T> implements Iterable<T>{
-    private static class Nodo <T>{
+    public static class Nodo <T>{
         public T info;
         public Nodo<T> next;
         public Nodo<T> pre;
@@ -103,66 +103,11 @@ public class ListaConcatenata <T> implements Iterable<T>{
 
 
     public Iterator<T> iterator(){
-        return (Iterator<T>) this.new ListIterator<T>();
+        return (Iterator<T>) new IteratoreLista<>(this.getTesta());
     }
 
-    public ListIterator<T> listIterator(){
-        return this.new ListIterator<T>();
+    public IteratoreLista<T> listIterator(){
+        return new IteratoreLista<>(this.getTesta());
     }
 
-
-    private class ListIterator<T> implements Iterator<Nodo<T>> {
-        private Nodo<T> cor; //Nel corrente viene conservato il valore appena saltato
-        private Nodo<T> pre;
-        private boolean forward = true;
-        private boolean okElimina = false;
-
-        public ListIterator(){
-            this.pre = null;
-            T a = null;
-            Nodo<T> n = new Nodo<T>(a);
-            n.next = (Nodo<T>) ListaConcatenata.this.getTesta();
-            this.cor = n;
-        }
-
-        public boolean hasNext(){
-            if(this.cor == null) return false;
-            return true;
-        }
-
-        public boolean hasPre(){
-            if(this.pre == null) return false;
-            return true;
-        }
-
-        public ListaConcatenata.Nodo<T> next(){
-            if(!hasNext()) throw new NoSuchElementException();
-            pre = cor;
-            cor = cor.next;
-            okElimina = true;
-            forward = true;
-            return cor;
-        }
-
-        public ListaConcatenata.Nodo<T> previous(){
-            if(!hasPre()) throw new NoSuchElementException();
-            cor = pre;
-            pre = pre.pre;
-            okElimina = true;
-            forward = false;
-            return pre;
-        }
-
-        public void remove(){
-            if(!okElimina) throw new IllegalStateException();
-            if(forward){
-                pre.next = cor.next; //Saltiamo il cor
-                pre.next.pre = pre; //Colleghiamo il corrente al pre giusto
-            }else{
-                cor.pre = pre.pre;
-            }
-            okElimina = false;
-        }
-
-    }
 }
