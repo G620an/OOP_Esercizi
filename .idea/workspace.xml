@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0240a4a0-adc6-4dea-8a65-01f31bc1746c" name="Changes" comment="Modified">
-      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Persona/Persona.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Python_Esercizi.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Python_Esercizi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Punto/AbstractPoint2D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Punto/CartesianPoint2D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Punto/Point2D.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,6 +91,13 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Python_Esercizi/Persona" />
+      <recent name="$PROJECT_DIR$/Python_Esercizi" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.main">
     <configuration name="MassaConcreta" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="UNNAMED_CLASS_CONFIGURATION" value="true" />
@@ -137,7 +141,7 @@
       <workItem from="1764085006586" duration="46133000" />
       <workItem from="1765050222276" duration="50734000" />
       <workItem from="1766241852310" duration="2211000" />
-      <workItem from="1766336869908" duration="3011000" />
+      <workItem from="1766336869908" duration="4509000" />
     </task>
     <task id="LOCAL-00001" summary="Autore e Nazionalità">
       <option name="closed" value="true" />
@@ -483,7 +487,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765916773419</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Modified">
+      <option name="closed" value="true" />
+      <created>1767364647619</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1767364647619</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
