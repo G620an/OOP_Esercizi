@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OOP_Esercizi.iml" filepath="$PROJECT_DIR$/OOP_Esercizi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Python_Esercizi/Python_Esercizi.iml" filepath="$PROJECT_DIR$/Python_Esercizi/Python_Esercizi.iml" />
     </modules>
   </component>
 </project>
