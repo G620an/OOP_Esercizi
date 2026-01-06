@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0240a4a0-adc6-4dea-8a65-01f31bc1746c" name="Changes" comment="Modified">
-      <change afterPath="$PROJECT_DIR$/src/oop/Collezioni/Iteratore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python_Esercizi/Ferrovia/MassaConcreta.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python_Esercizi/Ferrovia/MassaConcreta.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/oop/Collezioni/IteratoreLista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Collezioni/IteratoreLista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/oop/Collezioni/ListaConcatenata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Collezioni/ListaConcatenata.java" afterDir="false" />
@@ -143,15 +141,7 @@
       <workItem from="1764085006586" duration="46133000" />
       <workItem from="1765050222276" duration="50734000" />
       <workItem from="1766241852310" duration="2211000" />
-      <workItem from="1766336869908" duration="19998000" />
-    </task>
-    <task id="LOCAL-00001" summary="Autore e Nazionalità">
-      <option name="closed" value="true" />
-      <created>1762963158249</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1762963158249</updated>
+      <workItem from="1766336869908" duration="23373000" />
     </task>
     <task id="LOCAL-00002" summary="Autore e Nazionalità">
       <option name="closed" value="true" />
@@ -537,7 +527,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767701611143</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Modified">
+      <option name="closed" value="true" />
+      <created>1767713464951</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1767713464952</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

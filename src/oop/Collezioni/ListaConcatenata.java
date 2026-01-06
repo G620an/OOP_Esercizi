@@ -1,11 +1,8 @@
 package oop.Collezioni;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-import java.util.Objects;
+import java.util.*;
 
-public class ListaConcatenata <T> implements Iterable<T>{
+public class ListaConcatenata <T> extends LinkedList<T> implements Iterable<T>{
     public static class Nodo <T>{
         public T info;
         public Nodo<T> next;
@@ -58,8 +55,26 @@ public class ListaConcatenata <T> implements Iterable<T>{
         return this.size;
     }
 
-    public void add(T el){
+    @Override
+    public T remove(){
+        Nodo<T> ret = this.coda;
+        this.coda = this.coda.pre; //rimuove in coda
+        this.coda.next = null; //rimuove il next della coda
+        return ret.info;
+    }
+
+    @Override
+    public T removeFirst(){
+        Nodo<T> ret = this.testa;
+        this.testa = this.testa.next; //rimuovo la testa spostandola al next
+        this.testa.pre = null; //rimuovo il pre della nuova testa
+        return ret.info;
+    }
+
+    @Override
+    public boolean add(T el){
         this.aggiungiInCoda(el);
+        return true;
     }
     public void add(Nodo<T> n){
         this.aggiungiInCoda(n);
@@ -116,7 +131,7 @@ public class ListaConcatenata <T> implements Iterable<T>{
     }
 
     public IteratoreLista<T> listIterator(){
-        return new IteratoreLista<>(this.getTesta());
+        return new IteratoreLista<>(this.getTesta() , this);
     }
 
     @Override

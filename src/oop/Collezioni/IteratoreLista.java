@@ -1,6 +1,7 @@
 package oop.Collezioni;
 
-import java.util.Iterator;
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
@@ -10,11 +11,13 @@ public class IteratoreLista<T> implements ListIterator<T> {
     private int index = 0; //Indice del valore da saltare
     private boolean forward = true;
     private boolean okElimina = false; //Controllo per verificare se posso eliminare
+    private final LinkedList<T> l;
 
-    public IteratoreLista(ListaConcatenata.Nodo<T> testa){
+    public IteratoreLista(ListaConcatenata.Nodo<T> testa , LinkedList<T> l){
         T a = null; //Creo un elemento T null
         this.cor  = new ListaConcatenata.Nodo<T>(a); //Creo un nodo fittizio con next che punta alla testa della lista
         this.cor.next = testa;
+        this.l = l;
     }
 
     public boolean hasNext(){
@@ -49,8 +52,15 @@ public class IteratoreLista<T> implements ListIterator<T> {
 
     public void remove(){
         if(!okElimina) throw new IllegalStateException();
-        pre.next = cor.next; //Saltiamo il cor cioè l'elemento appena saltato (sia in un verso che nell'altro)
-        cor = pre;//Il nuovo corrente diventa il precedente
+        if(this.previousIndex() == 0){//Considero la rimozione in testa
+            l.removeFirst();
+        }
+        if(forward){
+            pre.next = cor.next; //Saltiamo il cor cioè l'elemento appena saltato
+            cor = pre;//Il nuovo corrente diventa il precedente
+        }else{
+            cor.pre = pre.pre;
+        }
         okElimina = false;
     }
 
