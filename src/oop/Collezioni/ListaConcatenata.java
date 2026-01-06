@@ -1,7 +1,9 @@
 package oop.Collezioni;
 
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+import java.util.Objects;
 
 public class ListaConcatenata <T> implements Iterable<T>{
     public static class Nodo <T>{
@@ -56,6 +58,13 @@ public class ListaConcatenata <T> implements Iterable<T>{
         return this.size;
     }
 
+    public void add(T el){
+        this.aggiungiInCoda(el);
+    }
+    public void add(Nodo<T> n){
+        this.aggiungiInCoda(n);
+    }
+
     public void aggiungiInTesta(Nodo<T> nodo){
         if(this.testa == null){
             this.testa = nodo;
@@ -65,11 +74,11 @@ public class ListaConcatenata <T> implements Iterable<T>{
             this.size++;
             return;
         }
-        this.testa.pre = nodo;
-        nodo.next = this.testa;
-        this.testa = nodo;
-        this.testa.pre = null;
-        this.size++;
+        this.testa.pre = nodo; //Testa precedente
+        nodo.next = this.testa; //La prossima testa ha come next la testa corrente
+        this.testa = nodo; //Sostituisco
+        this.testa.pre = null; //La nuova testa non ha pre
+        this.size++; //Incremento grandezza
     }
     public void aggiungiInTesta(T info){
         this.aggiungiInTesta(new Nodo<T>(info));
@@ -84,10 +93,10 @@ public class ListaConcatenata <T> implements Iterable<T>{
             this.size++;
             return;
         }
-        this.coda.next = nodo;
-        nodo.pre = this.coda;
-        this.coda = nodo;
-        this.coda.next = null;
+        this.coda.next = nodo; //Il next della vecchia coda è la nuova coda
+        nodo.pre = this.coda; //Il precedente della nuova coda è la vecchia coda
+        this.coda = nodo; //Sostituisco la coda
+        this.coda.next = null;//La nuova coda non ha next
     }
     public void aggiungiInCoda(T info){
         this.aggiungiInCoda(new Nodo<T>(info));
@@ -103,11 +112,43 @@ public class ListaConcatenata <T> implements Iterable<T>{
 
 
     public Iterator<T> iterator(){
-        return (Iterator<T>) new IteratoreLista<>(this.getTesta());
+        return new Iteratore<>(this.getTesta());
     }
 
     public IteratoreLista<T> listIterator(){
         return new IteratoreLista<>(this.getTesta());
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("ListaConcatenata{\n");
+        for(T el : this){
+            sb.append(" ").append(el).append(",").append("\n");
+        }
+        sb.append("}\n");
+        return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if(o == null) return false;
+        if(o == this) return true;
+        if(o instanceof ListaConcatenata l){
+            Iterator<T> it = l.iterator();
+            for(T el : this){
+                if(el != it.next()){
+                    return false;
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(this.toString());
     }
 
 }

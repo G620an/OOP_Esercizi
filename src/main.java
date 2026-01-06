@@ -3,6 +3,7 @@ import oop.Range.*;
 import oop.Punto.*;
 import oop.CorpiCelesti.*;
 import oop.Mazzo.*;
+import oop.Collezioni.*;
 
 public static void main(String[] args){
   /*
@@ -36,10 +37,10 @@ public static void main(String[] args){
       e.printStackTrace();
   }
 */
-
+/*
     Galassia g = CorpiCelestiUtil.generaGalassia("Via Lattea" , 10);
     System.out.println(g.toString());
-
+ */
 
    /*
 Mazzo m = new Mazzo();
@@ -47,5 +48,21 @@ System.out.println(m);
 
 */
 
+ListaConcatenata<String> nomi = new  ListaConcatenata<>();
+nomi.aggiungiInCoda("Ciao");
+nomi.aggiungiInCoda("Miao");
+nomi.aggiungiInCoda("Piao");
+nomi.aggiungiInCoda("Tao");
+int i = 0;
+IteratoreLista<String> it = nomi.listIterator();
+while(it.hasNext()){
+    System.out.println(it.next());
+    if(i == 0){
+        it.remove();
+    }
+    i++;
+}
 
+System.out.println("-----------");
+System.out.println(nomi);
 }
