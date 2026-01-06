@@ -9,5 +9,5 @@ class MassaConcreta(Massa):
 
     class MassaFrenata(Massa):
         def __init__(self, m2):
-            if(m2 < 0 or m2 > super().getMassa())
+            if(m2 < 0 or m2 > super().getMassa()):
             self._m2 = m2
