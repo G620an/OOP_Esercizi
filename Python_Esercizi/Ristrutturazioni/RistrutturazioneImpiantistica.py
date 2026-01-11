@@ -1,7 +1,7 @@
 from Ristrutturazioni import *
 
 class RistrutturazioneImpiantistica(RistrutturazioneAbstract):
-    def __init__(self , ID:Identificatore , nome:NomeProgetto , capOperai:CapacitaOperai , superficie:Superficie , budget:Budget , complessita:Complessita):
+    def __init__(self , ID:Identificatore , nome:NomeProgetto , capOperai:CapacitaOperai , superficie:Superficie , budget:Budget , complessita:Complessita , computoMetrico:ComputoMetrico):
         self._ID = ID
         self._nome = nome
         self._capOperai = capOperai
@@ -26,3 +26,6 @@ class RistrutturazioneImpiantistica(RistrutturazioneAbstract):
 
     def getComplessita(self):
         return self._complessita
+
+    def getComputoMetrico(self):
+        return self._computoMetrico

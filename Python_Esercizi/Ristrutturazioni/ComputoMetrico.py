@@ -1,4 +1,4 @@
-
+from Ristrutturazioni import Voce
 class ComputoMetrico:
     def __init__(self):
         pass
@@ -42,4 +42,4 @@ class ComputoMetrico:
             p += v.getOperai()
         return p
 
-    
+

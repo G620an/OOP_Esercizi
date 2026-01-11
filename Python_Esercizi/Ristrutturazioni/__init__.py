@@ -10,6 +10,9 @@ __all__ = [
     "RistrutturazioneImpiantistica",
     "CILA",
     "CodiceProgetto",
-    "RistrutturazioneStrutturale"
+    "RistrutturazioneStrutturale",
+    "ComputoMetrico",
+    "Voce",
+    "ComputoMetricoImpl"
 ]
 

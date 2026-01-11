@@ -21,7 +21,8 @@ class RistrutturazioneAbstract(R):
 
     def __str__(self):
         return "Identificatore: " + self.getID() + ", Nome: " + self.getNomeProgetto() + ", Capacità Operai: " + self.getCapacitaOperai() +\
-            ", Superficie: " + self.getSuperficie() + ", Budget: " + self.getBudget() + ", Complessità: " + self.getComplessita()
+            ", Superficie: " + self.getSuperficie() + ", Budget: " + self.getBudget() + ", Complessità: " + self.getComplessita() +\
+            ", Computo Metrico: " + self.getComputoMetrico()
 
     def __repr__(self):
         return self.__str__()
@@ -37,3 +38,10 @@ class RistrutturazioneAbstract(R):
 
     def __le__(self , other):
         return self.getID() <= other.getID()
+
+    def verifica(self):
+        op = self.getComputoMetrico().getOperaiTotale()
+        b = self.getComputoMetrico().getCostoTotale()
+        if (self.getCapacitaOperai().getCapacita() < op) or (self.getBudget().getBudget() < b):
+            return False
+        return True
