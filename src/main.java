@@ -58,7 +58,7 @@ IteratoreLista<String> it = nomi.listIterator();
 while(it.hasNext()){
     System.out.println(it.next());
     if(i == 1 && it.hasPrevious()){
-        System.out.println(it.previous());
+        //System.out.println(it.previous());
         it.remove();
     }
     i++;

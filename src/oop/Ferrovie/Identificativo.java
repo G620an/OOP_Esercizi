@@ -10,7 +10,6 @@ public record Identificativo(String ID) implements Comparable<Identificativo>{
                 throw new IllegalArgumentException("ERRORE ID");
             }
         }
-
         for(int i = 0; i < post.length(); i++){
             char c = post.charAt(i);
             if(!Character.isDigit(c)){

@@ -5,10 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0240a4a0-adc6-4dea-8a65-01f31bc1746c" name="Changes" comment="Modified">
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/Budget.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/CILA.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/CapacitaOperai.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/CodiceProgetto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/Complessita.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/ComputoMetrico.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/Identificatore.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/NomeProgetto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/Ristrutturazione.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/RistrutturazioneAbstract.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/RistrutturazioneImpiantistica.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/RistrutturazioneStrutturale.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/Superficie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/Voce.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Python_Esercizi/Ristrutturazioni/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oop/Collezioni/IteratoreLista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Collezioni/IteratoreLista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/oop/Collezioni/ListaConcatenata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Collezioni/ListaConcatenata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/Ferrovie/Identificativo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/Ferrovie/Identificativo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +35,8 @@
         <option value="Record" />
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Python Script" />
         <option value="Class" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -141,15 +155,7 @@
       <workItem from="1764085006586" duration="46133000" />
       <workItem from="1765050222276" duration="50734000" />
       <workItem from="1766241852310" duration="2211000" />
-      <workItem from="1766336869908" duration="23373000" />
-    </task>
-    <task id="LOCAL-00002" summary="Autore e Nazionalità">
-      <option name="closed" value="true" />
-      <created>1762963648839</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1762963648839</updated>
+      <workItem from="1766336869908" duration="38465000" />
     </task>
     <task id="LOCAL-00003" summary="Autore e Nazionalità">
       <option name="closed" value="true" />
@@ -535,7 +541,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767713464952</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Modified">
+      <option name="closed" value="true" />
+      <created>1767717032079</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1767717032079</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
