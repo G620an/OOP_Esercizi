@@ -110,13 +110,23 @@ System.out.println(nomi);
     s.aggiungiInCoda("Rio");
     s.aggiungiInCoda("Mio");
     s.aggiungiInCoda("Pio");
-    Iterator<String> it = s.iterator();
+    ListIterator<String> it = s.listIterator();
     int i = 0;
     while(it.hasNext()){
-        it.next();
-        if(i == 0) it.remove();
+        System.out.println("i="+ i + " " + it.next());
+        if(i == 2){
+            //System.out.println("Sono pre: " + it.previous());
+            it.remove();
+        }
         i++;
     }
+    System.out.println("---------------------------------------");
+    for(String l : s){
+        System.out.println(l);
+    }
+    System.out.println("---------------------------------------");
+    it.remove();
+    System.out.println("---------------------------------------");
     for(String l : s){
         System.out.println(l);
     }
