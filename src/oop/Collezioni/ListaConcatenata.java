@@ -2,7 +2,8 @@ package oop.Collezioni;
 
 import java.util.*;
 
-public class ListaConcatenata <T> extends LinkedList<T> implements Iterable<T>{
+public class ListaConcatenata <T>  extends LinkedList<T> implements Iterable<T>{
+    //-------------------------------------------------------------------------------
     public static class Nodo <T>{
         public T info;
         public Nodo<T> next;
@@ -15,18 +16,18 @@ public class ListaConcatenata <T> extends LinkedList<T> implements Iterable<T>{
         }
         public Nodo(T info, Nodo<T> pre){
             this.info = info;
-            this.pre = new Nodo<T>(pre.info);
+            this.pre = pre;
         }
         public Nodo(T info, Nodo<T> next, Nodo<T> pre){
             this.info = info;
-            this.next = new Nodo<T>(next.info);
-            this.pre = new Nodo<T>(pre.info);
+            this.next = next;
+            this.pre = pre;
         }
         public Nodo(Nodo<T> nodo){
             this(nodo.info, nodo.next, nodo.pre);
         }
     }
-
+    //--------------------------------------------------------------------------------
     private Nodo<T> testa;
     private Nodo<T> coda;
     private int size;
@@ -37,8 +38,8 @@ public class ListaConcatenata <T> extends LinkedList<T> implements Iterable<T>{
         this.size = 0;
     }
     public ListaConcatenata(ListaConcatenata<T> lista){
-        this.testa = new Nodo<T>(lista.getTesta());
-        this.coda = new Nodo<T>(lista.getCoda());
+        this.testa = new Nodo<>(lista.getTesta());
+        this.coda = new Nodo<>(lista.getCoda());
         this.size = lista.getSize();
     }
 
@@ -55,7 +56,7 @@ public class ListaConcatenata <T> extends LinkedList<T> implements Iterable<T>{
         return this.size;
     }
 
-    @Override
+
     public T remove(){
         Nodo<T> ret = this.coda;
         this.coda = this.coda.pre; //rimuove in coda
@@ -63,7 +64,7 @@ public class ListaConcatenata <T> extends LinkedList<T> implements Iterable<T>{
         return ret.info;
     }
 
-    @Override
+
     public T removeFirst(){
         Nodo<T> ret = this.testa;
         this.testa = this.testa.next; //rimuovo la testa spostandola al next
@@ -71,7 +72,7 @@ public class ListaConcatenata <T> extends LinkedList<T> implements Iterable<T>{
         return ret.info;
     }
 
-    @Override
+
     public boolean add(T el){
         this.aggiungiInCoda(el);
         return true;
@@ -127,7 +128,7 @@ public class ListaConcatenata <T> extends LinkedList<T> implements Iterable<T>{
 
 
     public Iterator<T> iterator(){
-        return new Iteratore<>(this.getTesta());
+        return this.new Iter();
     }
 
     public IteratoreLista<T> listIterator(){
@@ -164,6 +165,44 @@ public class ListaConcatenata <T> extends LinkedList<T> implements Iterable<T>{
     @Override
     public int hashCode(){
         return Objects.hash(this.toString());
+    }
+
+    //--------------------------------------------------------------------------------------------
+    public class Iter implements Iterator<T>{
+        private ListaConcatenata.Nodo<T> cor; //Nel corrente viene conservato il valore appena saltato
+        private ListaConcatenata.Nodo<T> pre;
+        private boolean okElimina = false;
+
+        public Iter(){
+            this.pre = null;
+            T a = null;
+            ListaConcatenata.Nodo<T> n = new ListaConcatenata.Nodo<>(a);
+            n.next = testa;
+            this.cor = n;
+        }
+
+        public boolean hasNext(){
+            if(this.cor.next == null) return false; //Se il next è null non posso fare cor.info nel next()
+            return true;
+        }
+
+        public T next(){
+            if(!hasNext()) throw new NoSuchElementException();
+            pre = cor;
+            cor = cor.next;
+            okElimina = true;
+            return cor.info;
+        }
+
+        public void remove(){
+            if(!okElimina) throw new IllegalStateException();
+            if(pre.info == null){ //Se l'info del pre è null allora elimino la testa
+                testa = testa.next;
+                return;
+            }
+            pre.next = cor.next; //Saltiamo il cor
+            okElimina = false;
+        }
     }
 
 }

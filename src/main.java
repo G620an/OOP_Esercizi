@@ -104,5 +104,20 @@ System.out.println(nomi);
     List<Integer> l1 = l.stream().sorted((a , b)->Integer.compare(a ,b)).filter((a)->a % 2 == 0).map(Integer :: reverse).toList();
     System.out.println(l1);
     */
-    Calcolatrice.avvio();
-}
+    //Calcolatrice.avvio();
+    ListaConcatenata<String> s = new ListaConcatenata<>();
+    s.aggiungiInCoda("Ciao");
+    s.aggiungiInCoda("Rio");
+    s.aggiungiInCoda("Mio");
+    s.aggiungiInCoda("Pio");
+    Iterator<String> it = s.iterator();
+    int i = 0;
+    while(it.hasNext()){
+        it.next();
+        if(i == 0) it.remove();
+        i++;
+    }
+    for(String l : s){
+        System.out.println(l);
+    }
+ }
