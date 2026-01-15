@@ -1,3 +1,4 @@
+import oop.Cestino.C;
 import oop.File.PersonaUtil;
 import oop.Utile.Utile;
 import oop.Range.*;
@@ -6,6 +7,9 @@ import oop.CorpiCelesti.*;
 import oop.Mazzo.*;
 import oop.Collezioni.*;
 import oop.File.Persona;
+
+
+
 
 public static void main(String[] args){
   /*
@@ -70,6 +74,7 @@ while(it.hasNext()){
 System.out.println("-----------");
 System.out.println(nomi);
      */
+    /*
     String file = "persone.txt";
     File f = new File(file);
     f.delete();
@@ -88,7 +93,14 @@ System.out.println(nomi);
     }catch(IOException e){
         e.printStackTrace();
     }
-
-
-
+    */
+    /*
+    ArrayList<Integer> l = new ArrayList<>();
+    for(int i = 843; i < 943; i++){
+        l.add(i%31);
+    }
+    System.out.println(l);
+    List<Integer> l1 = l.stream().sorted((a , b)->Integer.compare(a ,b)).filter((a)->a % 2 == 0).map(Integer :: reverse).toList();
+    System.out.println(l1);
+    */
 }
