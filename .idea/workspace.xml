@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0240a4a0-adc6-4dea-8a65-01f31bc1746c" name="Changes" comment="Modified">
-      <change afterPath="$PROJECT_DIR$/src/oop/File/Persona.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/oop/File/PersonaUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+    <list default="true" id="0240a4a0-adc6-4dea-8a65-01f31bc1746c" name="Changes" comment="Qualcosa sui file">
+      <change beforePath="$PROJECT_DIR$/src/oop/File/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/File/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/oop/File/PersonaUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/oop/File/PersonaUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,15 +142,7 @@
       <workItem from="1764085006586" duration="46133000" />
       <workItem from="1765050222276" duration="50734000" />
       <workItem from="1766241852310" duration="2211000" />
-      <workItem from="1766336869908" duration="47591000" />
-    </task>
-    <task id="LOCAL-00006" summary="Modified">
-      <option name="closed" value="true" />
-      <created>1762966009623</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1762966009623</updated>
+      <workItem from="1766336869908" duration="47908000" />
     </task>
     <task id="LOCAL-00007" summary="Modified">
       <option name="closed" value="true" />
@@ -538,7 +528,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768150000713</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Qualcosa sui file">
+      <option name="closed" value="true" />
+      <created>1768476640651</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1768476640651</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +557,8 @@
     <MESSAGE value="Revert &quot;Revert &quot;Biblioteca&quot;&quot;&#10;&#10;This reverts commit 2afad514" />
     <MESSAGE value="Autore e Nazionalità" />
     <MESSAGE value="Modified" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified" />
+    <MESSAGE value="Qualcosa sui file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Qualcosa sui file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

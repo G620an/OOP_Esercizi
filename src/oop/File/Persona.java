@@ -15,7 +15,7 @@ public class Persona {
         this.eta = eta;
         this.peso = peso;
     }
-    
+
     public Persona(Persona p) {
         this.nome = p.getNome();
         this.cognome = p.getCognome();
@@ -56,6 +56,6 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Nome: " + this.getNome() + ", Cognome: " + this.getCognome() +  ", Eta: " + this.getEta() + ", Peso: " + this.getPeso() + "kg";
+        return "\nNome: " + this.getNome() + ", Cognome: " + this.getCognome() +  ", Eta: " + this.getEta() + ", Peso: " + this.getPeso() + "kg\n";
     }
 }

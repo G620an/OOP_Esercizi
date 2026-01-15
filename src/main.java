@@ -72,6 +72,8 @@ System.out.println(nomi);
      */
     String file = "persone.txt";
     File f = new File(file);
+    f.delete();
+    f = new File(file);
     Persona p0 = new Persona("aaa" , "aaa" , 1 , 3.0);
     Persona p1 = new Persona("bbb" , "bbb" , 2 , 6.0);
     Persona p2 = new Persona("ccc" , "ccc" , 3 , 9.0);

@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class PersonaUtil {
     private PersonaUtil() {}
     public static void scriviPersona(File f , Persona p) throws IOException {
-        try(PrintWriter pw = new PrintWriter(f)){
+        try(PrintWriter pw = new PrintWriter(new FileWriter(f , true))){ //Occorre usare FileWriter per specificare di appendere e non sovrascrivere
             StringBuilder sb = new StringBuilder();
             sb.append(p.getNome());
             sb.append(",").append(p.getCognome());
