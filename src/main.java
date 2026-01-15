@@ -1,9 +1,11 @@
+import oop.File.PersonaUtil;
 import oop.Utile.Utile;
 import oop.Range.*;
 import oop.Punto.*;
 import oop.CorpiCelesti.*;
 import oop.Mazzo.*;
 import oop.Collezioni.*;
+import oop.File.Persona;
 
 public static void main(String[] args){
   /*
@@ -48,6 +50,7 @@ System.out.println(m);
 
 */
 
+    /*
 ListaConcatenata<String> nomi = new  ListaConcatenata<>();
 nomi.aggiungiInCoda("Ciao");
 nomi.aggiungiInCoda("Miao");
@@ -66,4 +69,24 @@ while(it.hasNext()){
 
 System.out.println("-----------");
 System.out.println(nomi);
+     */
+    String file = "persone.txt";
+    File f = new File(file);
+    Persona p0 = new Persona("aaa" , "aaa" , 1 , 3.0);
+    Persona p1 = new Persona("bbb" , "bbb" , 2 , 6.0);
+    Persona p2 = new Persona("ccc" , "ccc" , 3 , 9.0);
+    Persona p3 = new Persona("ddd" , "ddd" , 4 , 12.0);
+    try {
+        PersonaUtil.scriviPersona(f, p0);
+        PersonaUtil.scriviPersona(f, p1);
+        PersonaUtil.scriviPersona(f, p2);
+        PersonaUtil.scriviPersona(f, p3);
+        List<Persona> pe = PersonaUtil.leggiPersone(f);
+        System.out.println(pe);
+    }catch(IOException e){
+        e.printStackTrace();
+    }
+
+
+
 }
