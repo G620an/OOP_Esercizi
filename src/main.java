@@ -105,6 +105,7 @@ System.out.println(nomi);
     System.out.println(l1);
     */
     //Calcolatrice.avvio();
+    /*
     ListaConcatenata<String> s = new ListaConcatenata<>();
     s.aggiungiInCoda("Ciao");
     s.aggiungiInCoda("Rio");
@@ -131,3 +132,4 @@ System.out.println(nomi);
         System.out.println(l);
     }
  }
+  */
