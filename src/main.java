@@ -1,3 +1,4 @@
+import oop.Calcolatrice.Calcolatrice;
 import oop.Cestino.C;
 import oop.File.PersonaUtil;
 import oop.Utile.Utile;
@@ -103,4 +104,5 @@ System.out.println(nomi);
     List<Integer> l1 = l.stream().sorted((a , b)->Integer.compare(a ,b)).filter((a)->a % 2 == 0).map(Integer :: reverse).toList();
     System.out.println(l1);
     */
+    Calcolatrice.avvio();
 }
