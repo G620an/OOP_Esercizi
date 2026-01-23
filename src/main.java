@@ -8,11 +8,13 @@ import oop.CorpiCelesti.*;
 import oop.Mazzo.*;
 import oop.Collezioni.*;
 import oop.File.Persona;
+import oop.Cestino.*;
+import oop.CifrarioDiCesare.*;
 
 
 
 
-public static void main(String[] args){
+public static void main(String[] args) {
   /*
   if(args.length != 3){
     throw new IllegalArgumentException("Numero di argomenti diverso da tre");
@@ -131,5 +133,13 @@ System.out.println(nomi);
     for(String l : s){
         System.out.println(l);
     }
- }
   */
+    /*
+    List<Padre> l = new LinkedList<>();
+    l.add(new Figlio("Giacomo" , "Leopardi"));
+    System.out.println(l);
+     */
+
+    CesarCipher.prova();
+
+ }
