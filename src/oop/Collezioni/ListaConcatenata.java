@@ -131,8 +131,8 @@ public class ListaConcatenata <T>  extends LinkedList<T> implements Iterable<T>{
         return this.new Iter();
     }
 
-    public IteratoreLista<T> listIterator(){
-        return new IteratoreLista<>(this.getTesta() , this);
+    public ListIterator<T> listIterator(){
+        return this.new IteratoreL();
     }
 
     @Override
@@ -167,7 +167,7 @@ public class ListaConcatenata <T>  extends LinkedList<T> implements Iterable<T>{
         return Objects.hash(this.toString());
     }
 
-    //--------------------------------------------------------------------------------------------
+    //-----------------------------------------------------------------------------------------------------------------
     public class Iter implements Iterator<T>{
         private ListaConcatenata.Nodo<T> cor; //Nel corrente viene conservato il valore appena saltato
         private ListaConcatenata.Nodo<T> pre;
@@ -204,5 +204,94 @@ public class ListaConcatenata <T>  extends LinkedList<T> implements Iterable<T>{
             okElimina = false;
         }
     }
+
+    //-------------------------------------------------------------------------------------------------------------------
+
+    public class IteratoreL implements ListIterator<T> {
+        private Nodo<T> cor; //Nel corrente viene conservato il valore appena saltato
+        private Nodo<T> pre; //Valore saltato in precedenza
+        private int index = 0; //Indice del valore da saltare
+        private boolean forward = true;
+        private boolean okElimina = false; //Controllo per verificare se posso eliminare
+
+        public IteratoreL(){
+            T a = null; //Creo un elemento T null
+            this.cor  = new ListaConcatenata.Nodo<T>(a); //Creo un nodo fittizio con next che punta alla testa della lista
+            this.cor.next = testa;
+        }
+
+        public boolean hasNext(){
+            if(this.cor.next == null) return false;
+            return true;
+        }
+
+        public boolean hasPrevious(){
+            if(this.pre == null) return false;
+            return true;
+        }
+
+        public T next(){
+            if(!hasNext()) throw new NoSuchElementException();
+            pre = cor; //Il precedente diventa il vecchio corrente
+            cor = cor.next; //Sostituisco il corrente vecchio con il nuovo
+            okElimina = true; //Controllo per elimina
+            forward = true; //Controllo per elimina
+            index ++; //Incremento per index
+            return cor.info; //Restituisco il corrente nuovo
+        }
+
+        public T previous(){
+            if(!hasPrevious()) throw new NoSuchElementException();
+            cor = pre; //Faccio tornare indietro il cor
+            pre = cor.pre; //Il pre diventa il pre del corrente
+            okElimina = true; //Controllo per elimina
+            forward = false; //Controllo per elimina
+            index --; //Aggiornamento index
+            return cor.info; //Restituisco il pre.info che ho in cor.info
+        }
+
+        public void remove(){
+            if(!okElimina) throw new IllegalStateException();
+            if(pre.info == null){//Considero la rimozione in testa
+                testa = testa.next;
+                testa.pre = null;
+                okElimina = false;
+                return;
+            }
+            if(cor.next == null){//Considero la rimozione in coda
+                coda = coda.pre;
+                coda.next = null;
+                okElimina = false;
+                return;
+            }
+            pre.next = cor.next; //Saltiamo il cor cioè l'elemento appena saltato
+            cor.next.pre = pre; //Collego bene il nodo dopo l'eliminazione
+            /*
+            if(forward){
+                pre.next = cor.next; //Saltiamo il cor cioè l'elemento appena saltato
+                cor.next.pre = pre; //Collego bene il nodo dopo l'eliminazione
+            }
+            */
+            okElimina = false;
+        }
+
+        public void set(T e){
+            cor.info = e; //In ogni caso il cor è l'elemento appena saltato sia in un verso che nell'altro
+        }
+
+        public int nextIndex(){
+            return index;
+        }
+
+        public int previousIndex(){
+            return index - 1;
+        }
+
+        public void add(T e){
+            return;
+        }
+
+    }
+
 
 }

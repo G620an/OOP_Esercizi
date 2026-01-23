@@ -119,7 +119,7 @@ System.out.println(nomi);
         System.out.println("i="+ i + " " + it.next());
         if(i == 2){
             //System.out.println("Sono pre: " + it.previous());
-            it.remove();
+            //it.remove();
         }
         i++;
     }
@@ -128,18 +128,23 @@ System.out.println(nomi);
         System.out.println(l);
     }
     System.out.println("---------------------------------------");
+    System.out.println("Voglio eliminare la coda");
+    it.remove();
+    System.out.println("---------------------------------------");
+    System.out.println("Voglio controllare elimina previous " + it.previous());
     it.remove();
     System.out.println("---------------------------------------");
     for(String l : s){
         System.out.println(l);
     }
-  */
+    */
+
     /*
     List<Padre> l = new LinkedList<>();
     l.add(new Figlio("Giacomo" , "Leopardi"));
     System.out.println(l);
      */
 
-    CesarCipher.prova();
+    //CesarCipher.prova();
 
  }

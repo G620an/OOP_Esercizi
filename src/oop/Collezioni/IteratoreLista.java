@@ -42,8 +42,8 @@ public class IteratoreLista<T> implements ListIterator<T> {
 
     public T previous(){
         if(!hasPrevious()) throw new NoSuchElementException();
-        pre = cor; //Il pre diventa il cor
-        cor = cor.pre; //Faccio tornare indietro il cor
+        cor = pre; //Faccio tornare indietro il cor
+        pre = cor.pre; //Il pre diventa il pre del corrente
         okElimina = true; //Controllo per elimina
         forward = false; //Controllo per elimina
         index --; //Aggiornamento index
@@ -58,12 +58,14 @@ public class IteratoreLista<T> implements ListIterator<T> {
         if(cor.next == null){//Considero la rimozione in coda
             l.removeLast();
         }
+        pre.next = cor.next; //Saltiamo il cor cioè l'elemento appena saltato
+        cor.next.pre = pre; //Collego bene il nodo dopo l'eliminazione
+        /*
         if(forward){
             pre.next = cor.next; //Saltiamo il cor cioè l'elemento appena saltato
             cor.next.pre = pre; //Collego bene il nodo dopo l'eliminazione
-        }else{
-            cor.pre.next = pre; //Il next del precedente del corrente, punta al pre, che ora si trova avanti però
         }
+        */
         okElimina = false;
     }
 
