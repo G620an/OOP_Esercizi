@@ -32,20 +32,21 @@ public static void main(String[] args) {
     throw new IllegalArgumentException("Parametro di cifratura errato");
   }
    */
-/*
-  long n = 5; //sono 4 MB di roba perchè gli int sono a 4 byte
+
+  long n = 10; //sono 4 MB di roba perchè gli int sono a 4 byte
   String path = "prova.dat";
   File file = new File(path);
   try{
+      System.out.println("IN:");
       Utile.generaRandom(new BufferedOutputStream(new FileOutputStream(path), 8192), n);
       Utile.printFile(new FileInputStream(file), file.length());
       Utile.naturalMergeSort(file);
-      System.out.println("-------------------------------------------");
+      System.out.println("-------------------------------------------"); System.out.println("OUT:");
       Utile.printFile(new FileInputStream(file), file.length());
   }catch(IOException e){
       e.printStackTrace();
   }
-*/
+
 /*
     Galassia g = CorpiCelestiUtil.generaGalassia("Via Lattea" , 10);
     System.out.println(g.toString());

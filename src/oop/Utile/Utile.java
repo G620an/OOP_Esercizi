@@ -11,6 +11,7 @@ public class Utile{
         Utile.bufferSize = bufferSize;
     }
 
+
     public static void generaRandom(OutputStream out, long n)throws IOException{
        Random r = new Random();
        DataOutputStream dos = new DataOutputStream(out);
@@ -21,7 +22,7 @@ public class Utile{
         dos.close();
     }
 
-    public static void naturalMergeSort(File f){
+    public static void naturalMergeSort(File f)throws IOException{
         File f1 = null;
         File f2 = null;
         String temp1 = "temp1.dat";
@@ -105,20 +106,15 @@ public class Utile{
                     c2 -= 4;
                 }
             }
-            dos.flush();
             if(c1 > 3){
-                int cor = 0;
                 while(c1 > 3){
-                    cor = dis1.readInt();
                     c1 -= 4;
-                    dos.writeInt(cor);
+                    dos.writeInt(dis1.readInt());
                 }
             }else if(c2 > 3){
-                int cor = 0;
                 while(c2 > 3){
-                    cor = dis2.readInt();
                     c2 -= 4;
-                    dos.writeInt(cor);
+                    dos.writeInt(dis2.readInt());
                 }
             }
             dos.flush();

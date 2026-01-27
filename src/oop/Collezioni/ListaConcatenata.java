@@ -3,7 +3,7 @@ package oop.Collezioni;
 import java.util.*;
 
 public class ListaConcatenata <T>  extends LinkedList<T> implements Iterable<T>{
-    //-------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------------
     public static class Nodo <T>{
         public T info;
         public Nodo<T> next;
@@ -27,7 +27,7 @@ public class ListaConcatenata <T>  extends LinkedList<T> implements Iterable<T>{
             this(nodo.info, nodo.next, nodo.pre);
         }
     }
-    //--------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------------
     private Nodo<T> testa;
     private Nodo<T> coda;
     private int size;
