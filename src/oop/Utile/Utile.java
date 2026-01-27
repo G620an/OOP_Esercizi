@@ -5,7 +5,7 @@ import java.util.*;
 public class Utile{
     private Utile(){}
 
-    private static int bufferSize = 8192;
+    private static int bufferSize = 8192*10;
 
     public static void setBufferSize(int bufferSize){
         Utile.bufferSize = bufferSize;
@@ -106,6 +106,13 @@ public class Utile{
                     c2 -= 4;
                 }
             }
+            if(uno <= due){
+                dos.writeInt(uno);
+                dos.writeInt(due); //Recupero uno e due
+            }else{
+                dos.writeInt(due); //Recupero due e uno
+                dos.writeInt(uno);
+            }
             if(c1 > 3){
                 while(c1 > 3){
                     c1 -= 4;
@@ -123,9 +130,9 @@ public class Utile{
         }
     }
 
-    public static void printFile(FileInputStream f, long n){
-        try(DataInputStream dis = new DataInputStream(new BufferedInputStream(f,  bufferSize));){
-            long c = n;
+    public static void printFile(File f){
+        try(DataInputStream dis = new DataInputStream(new BufferedInputStream(new FileInputStream(f),  bufferSize));){
+            long c = f.length();
             int cor = 0;
             while(c > 3){
                 cor = dis.readInt();

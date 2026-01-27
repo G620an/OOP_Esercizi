@@ -33,16 +33,16 @@ public static void main(String[] args) {
   }
    */
 
-  long n = 10; //sono 4 MB di roba perchè gli int sono a 4 byte
+  long n = 1000;
   String path = "prova.dat";
   File file = new File(path);
   try{
       System.out.println("IN:");
       Utile.generaRandom(new BufferedOutputStream(new FileOutputStream(path), 8192), n);
-      Utile.printFile(new FileInputStream(file), file.length());
+      Utile.printFile(file);
       Utile.naturalMergeSort(file);
       System.out.println("-------------------------------------------"); System.out.println("OUT:");
-      Utile.printFile(new FileInputStream(file), file.length());
+      Utile.printFile(file);
   }catch(IOException e){
       e.printStackTrace();
   }
